@@ -1,3 +1,6 @@
-h1 {
-  color: darkblue;
-}
+@import "fonts.scss";
+@import "variables.scss";
+@import "global.scss";
+@import "blocks/container.scss";
+@import "blocks/page.scss";
+@import "blocks/visually-hidden.scss";

@@ -2,7 +2,6 @@
 .idea
 .vscode
 package-lock.json
-build/css/style.min.css.map
 *.ai
 *.log
 *.pdf
@@ -10,6 +9,7 @@ build/css/style.min.css.map
 *.sublime*
 node_modules/
 npm-debug.*
+build/css/*.map
 source/css/*.css
 source/css/*.map
 img-origin/
