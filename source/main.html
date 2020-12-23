@@ -11,8 +11,55 @@
 <body class="page">
 
 <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <form class="header__search" action="https://echo.htmlacademy.ru" method="GET">
+        <label for="#header-search">
+          <span class="visually-hidden">Search by page</span>
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+          </svg>
+        </label>
+        <input type="search" id="#header-search" placeholder="Type here to search">
+      </form>
+
+      <a class="header__logo logo">
+        <img src="img/logo.svg"
+        width="66" height="66"
+        alt="Logotype CH">
+      </a>
+
+      <div class="header__user-interface">
+        <a href="#">Login</a>
+        <a href="#">Cart <output>0</output></a>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
-    HEADER
+    <nav class="header__navigation navigation">
+      <ul class="navigation__list">
+        <li>
+          <a href="#" class="navigation__link">What’s new</a>
+        </li>
+
+        <li>
+          <a href="#" class="navigation__link">Chokers</a>
+        </li>
+
+        <li>
+          <a href="#" class="navigation__link">Necklaces</a>
+        </li>
+
+        <li>
+          <a href="#" class="navigation__link">Rings</a>
+        </li>
+
+        <li>
+          <a href="#" class="navigation__link">Earrings</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 

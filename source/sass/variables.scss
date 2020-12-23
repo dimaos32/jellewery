@@ -2,14 +2,14 @@
 
 $black: #000000;
 
-$black-almost:#1D1613;
-$c: #9B9997;
-$white-almost: #F6F5F4;
+$black-almost:#1d1613;
+$grey: #9b9997;
+$white-almost: #f6f5f4;
 
 $white: #ffffff;
 
-$site: #A87B62;
-$site: #564034;
+$site: #a87b62;
+$site-bright: #564034;
 
 // Fonts
 
@@ -27,3 +27,13 @@ $desktop-width-max: 1200px;
 
 $page--txt: $black-almost;
 $page--bg: $white;
+
+
+$header--form-icon: $black;
+$header--form-icon-hover: $site;
+$header--form-border-hover: $site;
+$header--user-interface-link: $black-almost;
+$header--user-interface-link-hover: $site;
+
+$navigation--link: $black-almost;
+$navigation--link-hover: $site;

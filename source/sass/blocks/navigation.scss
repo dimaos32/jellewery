@@ -1,0 +1,24 @@
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__link {
+  display: block;
+  padding: 18px;
+  line-height: 1.5;
+  color: $navigation--link;
+
+  &:hover,
+  &:focus {
+    color: $navigation--link-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
