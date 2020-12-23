@@ -164,16 +164,47 @@ img {
     .header__user-interface a:active {
       opacity: 0.6; }
 
+.header__menu-toggle,
+.header__login-btn {
+  display: none; }
+
 @media (max-width: 1023px) {
   .header__search,
   .header__user-interface {
     display: none; }
   .header__top {
+    position: relative;
     border-bottom: none; }
     .header__top .container {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; } }
+              justify-content: center; }
+  .header__menu-toggle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .header__login-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    outline: none; }
+    .header__login-btn svg {
+      display: block;
+      width: 20px;
+      height: 18px;
+      stroke: #1d1613;
+      stroke-width: 2px; }
+    .header__login-btn:hover svg,
+    .header__login-btn:focus svg {
+      stroke: #a87b62; }
+    .header__login-btn:active svg {
+      opacity: 0.6; } }
 
 .logo {
   display: block; }

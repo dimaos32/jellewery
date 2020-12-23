@@ -88,6 +88,11 @@
   }
 }
 
+.header__menu-toggle,
+.header__login-btn {
+  display: none;
+}
+
 @media (max-width: $tablet-width) {
   .header__search,
   .header__user-interface {
@@ -95,10 +100,45 @@
   }
 
   .header__top {
+    position: relative;
     border-bottom: none;
 
     .container {
       justify-content: center;
+    }
+  }
+
+  .header__menu-toggle{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    transform: translateY(-50%);
+  }
+
+  .header__login-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+    outline: none;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 18px;
+      stroke: $header--login-btn;
+      stroke-width: 2px;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      stroke: $header--login-btn-hover;
+    }
+
+    &:active svg {
+      opacity: 0.6;
     }
   }
 }
