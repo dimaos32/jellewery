@@ -185,7 +185,37 @@ img {
     top: 50%;
     left: 45px;
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
+            transform: translateY(-50%);
+    width: 45px;
+    height: 40px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none; }
+    .header__menu-toggle--closed::before, .header__menu-toggle--opened::before, .header__menu-toggle--opened::after {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 10px;
+      width: 25px;
+      height: 2px;
+      background-color: #1d1613; }
+    .header__menu-toggle--closed::before {
+      -webkit-box-shadow: 0 -8px #1d1613, 0 8px #1d1613;
+              box-shadow: 0 -8px #1d1613, 0 8px #1d1613; }
+    .header__menu-toggle--opened::before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .header__menu-toggle--opened::after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+    .header__menu-toggle--closed:hover::before, .header__menu-toggle--opened:hover::before, .header__menu-toggle--opened:hover::after, .header__menu-toggle--closed:focus::before, .header__menu-toggle--opened:focus::before, .header__menu-toggle--opened:focus::after {
+      background-color: #a87b62; }
+    .header__menu-toggle--closed:hover::before, .header__menu-toggle--closed:focus::before {
+      -webkit-box-shadow: 0 -8px #a87b62, 0 8px #a87b62;
+              box-shadow: 0 -8px #a87b62, 0 8px #a87b62; }
+    .header__menu-toggle--closed:active::before, .header__menu-toggle--opened:active::before, .header__menu-toggle--opened:active::after {
+      opacity: 0.6; }
   .header__login-btn {
     display: block;
     position: absolute;

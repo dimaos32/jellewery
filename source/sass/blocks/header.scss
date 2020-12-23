@@ -108,12 +108,66 @@
     }
   }
 
-  .header__menu-toggle{
+  .header__menu-toggle {
     display: block;
     position: absolute;
     top: 50%;
     left: 45px;
     transform: translateY(-50%);
+    width: 45px;
+    height: 40px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &--closed::before,
+    &--opened::before,
+    &--opened::after {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 10px;
+      width: 25px;
+      height: 2px;
+      background-color: $header--menu-toggle;
+    }
+
+    &--closed::before {
+      box-shadow:
+        0 -8px $header--menu-toggle,
+        0 8px $header--menu-toggle;
+    }
+
+    &--opened::before {
+      transform: rotate(45deg);
+    }
+
+    &--opened::after {
+      transform: rotate(-45deg);
+    }
+
+    &--closed:hover::before,
+    &--opened:hover::before,
+    &--opened:hover::after,
+    &--closed:focus::before,
+    &--opened:focus::before,
+    &--opened:focus::after {
+      background-color: $header--menu-toggle-hover;
+    }
+
+    &--closed:hover::before,
+    &--closed:focus::before {
+      box-shadow:
+        0 -8px $header--menu-toggle-hover,
+        0 8px $header--menu-toggle-hover;
+    }
+
+    &--closed:active::before,
+    &--opened:active::before,
+    &--opened:active::after {
+      opacity: 0.6;
+    }
   }
 
   .header__login-btn {
