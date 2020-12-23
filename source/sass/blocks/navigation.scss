@@ -1,3 +1,7 @@
+.navigation__search {
+  display: none;
+}
+
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
@@ -5,6 +9,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &--secondary {
+    display: none;
+  }
 }
 
 .navigation__link {
@@ -13,6 +21,10 @@
   line-height: 1.5;
   color: $navigation--link;
 
+  &--login {
+    display: none;
+  }
+
   &:hover,
   &:focus {
     color: $navigation--link-hover;
@@ -20,5 +32,77 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .navigation__search {
+    display: block;
+    position: relative;
+    margin-bottom: 35px;
+
+    svg {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      fill: $header--form-icon;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      padding-left: 36px;
+      font: inherit;
+      font-size: 16px;
+      line-height: 1.15;
+      color: $navigation--search-txt;
+      border: 1px solid $navigation--search-border;
+      border-radius: 20px;
+      outline: none;
+
+    }
+  }
+
+  .navigation__list {
+    display: block;
+    margin-left: -20px;
+    margin-bottom: 40px;
+
+    &--secondary {
+      display: block;
+      margin-left: -15px;
+    }
+  }
+
+  .navigation__link {
+    width: max-content;
+    padding: 20px;
+    font-size: 24px;
+    line-height: 1;
+
+    .navigation__list--secondary & {
+      padding: 15px;
+      font-size: 18px;
+      color: $navigation--link-secondary;
+
+      &:hover,
+      &:focus {
+        color: $navigation--link-hover;
+      }
+    }
+
+    &--login {
+      margin-left: -15px;
+      margin-bottom: 40px;
+      padding: 15px;
+      font-size: 18px;
+      display: block;
+    }
   }
 }

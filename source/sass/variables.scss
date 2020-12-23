@@ -29,11 +29,16 @@ $page--txt: $black-almost;
 $page--bg: $white;
 
 
+$header--border: $white-almost;
 $header--form-icon: $black;
 $header--form-icon-hover: $site;
+$header--form-txt: $black-almost;
 $header--form-border-hover: $site;
 $header--user-interface-link: $black-almost;
 $header--user-interface-link-hover: $site;
 
 $navigation--link: $black-almost;
+$navigation--link-secondary: rgba($black-almost, 0.75);
 $navigation--link-hover: $site;
+$navigation--search-txt: $black-almost;
+$navigation--search-border: $black-almost;
