@@ -1,5 +1,5 @@
 .footer {
-  padding: 100px 0;
+  padding: 100px 0 50px;
   color: $footer--txt;
   background-color: $footer--bg;
 }
@@ -9,6 +9,22 @@
   flex-wrap: wrap;
 
   section {
-    width: 50%;
+    margin-bottom: 50px;
+    width: 585px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer {
+    padding: 60px 0 10px;
+    color: $footer--txt;
+    background-color: $footer--bg;
+  }
+
+  .footer__container {
+    section {
+      margin-bottom: 50px;
+      width: 100%;
+    }
   }
 }
