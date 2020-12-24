@@ -94,6 +94,19 @@
 }
 
 @media (max-width: $tablet-width) {
+  .header {
+    &--menu-closed {
+      position: static;
+    }
+
+    &--menu-opened {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: $navigation--menu-opened-bg;
+    }
+  }
+
   .header__search,
   .header__user-interface {
     display: none;
@@ -130,13 +143,18 @@
       left: 10px;
       width: 25px;
       height: 2px;
-      background-color: $header--menu-toggle;
     }
 
     &--closed::before {
+      background-color: $header--menu-closed;
       box-shadow:
-        0 -8px $header--menu-toggle,
-        0 8px $header--menu-toggle;
+        0 -8px $header--menu-closed,
+        0 8px $header--menu-closed;
+    }
+
+    &--opened::before,
+    &--opened::after {
+      background-color: $header--menu-opened;
     }
 
     &--opened::before {
@@ -148,19 +166,18 @@
     }
 
     &--closed:hover::before,
-    &--opened:hover::before,
-    &--opened:hover::after,
-    &--closed:focus::before,
-    &--opened:focus::before,
-    &--opened:focus::after {
-      background-color: $header--menu-toggle-hover;
+    &--closed:focus::before {
+      background-color: $header--menu-closed-hover;
+      box-shadow:
+        0 -8px $header--menu-closed-hover,
+        0 8px $header--menu-closed-hover;
     }
 
-    &--closed:hover::before,
-    &--closed:focus::before {
-      box-shadow:
-        0 -8px $header--menu-toggle-hover,
-        0 8px $header--menu-toggle-hover;
+    &--opened:hover::before,
+    &--opened:hover::after,
+    &--opened:focus::before,
+    &--opened:focus::after {
+      background-color: $header--menu-opened-hover;
     }
 
     &--closed:active::before,
@@ -182,17 +199,28 @@
       display: block;
       width: 20px;
       height: 18px;
-      stroke: $header--login-btn;
+      stroke: $header--menu-closed;
       stroke-width: 2px;
     }
 
     &:hover svg,
     &:focus svg {
-      stroke: $header--login-btn-hover;
+      stroke: $header--menu-closed-hover;
     }
 
     &:active svg {
       opacity: 0.6;
+    }
+
+    .header--menu-opened & {
+      svg {
+        stroke: $header--menu-opened;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        stroke: $header--menu-opened-hover;
+      }
     }
   }
 }
