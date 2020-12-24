@@ -82,7 +82,9 @@
 }
 
 @media (max-width: $mobile-width) {
-  p {
-    width: 240px;
+  .subscribe {
+    p {
+      width: 240px;
+    }
   }
 }
