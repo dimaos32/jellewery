@@ -1,0 +1,14 @@
+.footer {
+  padding: 100px 0;
+  color: $footer--txt;
+  background-color: $footer--bg;
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+
+  section {
+    width: 50%;
+  }
+}

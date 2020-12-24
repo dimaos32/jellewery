@@ -29,6 +29,10 @@ $page--txt: $black-almost;
 $page--bg: $white;
 
 
+$footer--txt: $white;
+$footer--bg: $black;
+
+
 $header--border: $white-almost;
 $header--form-icon: $black;
 $header--form-icon-hover: $site;
@@ -56,3 +60,9 @@ $navigation--search-menu-opened-txt: $white;
 $navigation--search-menu-opened-bg: rgba($white, 0.15);
 $navigation--search-menu-opened-hover: $white;
 $navigation--menu-opened-bg: $site;
+
+$subscribe-txt: $white;
+$subscribe-txt-hover: $site;
+$subscribe-txt-alt: $grey;
+$subscribe-border: $white;
+$subscribe-border-hover: $site;
