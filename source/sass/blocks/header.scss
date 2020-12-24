@@ -224,3 +224,13 @@
     }
   }
 }
+
+@media (max-width: $mobile-width) {
+  .header__menu-toggle {
+    left: 15px;
+  }
+
+  .header__login-btn {
+    right: 15px;
+  }
+}

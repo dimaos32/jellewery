@@ -175,3 +175,19 @@
     }
   }
 }
+
+@media (max-width: $mobile-width) {
+  .navigation__search {
+    margin-bottom: 25px;
+  }
+
+  .navigation__list {
+    margin-bottom: 30px;
+  }
+
+  .navigation__link {
+    &--login {
+      margin-bottom: 30px;
+    }
+  }
+}

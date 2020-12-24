@@ -251,12 +251,23 @@ img {
     .header--menu-opened .header__login-btn:focus svg {
       stroke: #564034; } }
 
+@media (max-width: 767px) {
+  .header__menu-toggle {
+    left: 15px; }
+  .header__login-btn {
+    right: 15px; } }
+
 .logo {
   display: block; }
   .logo svg {
     display: block;
     width: 66px;
     height: 66px; }
+
+@media (max-width: 767px) {
+  .logo svg {
+    width: 52px;
+    height: 52px; } }
 
 .navigation__search {
   display: none; }
@@ -372,6 +383,14 @@ img {
       color: rgba(255, 255, 255, 0.75); }
       .header--menu-opened .navigation__list--secondary .navigation__link:hover, .header--menu-opened .navigation__list--secondary .navigation__link:focus {
         color: #564034; } }
+
+@media (max-width: 767px) {
+  .navigation__search {
+    margin-bottom: 25px; }
+  .navigation__list {
+    margin-bottom: 30px; }
+  .navigation__link--login {
+    margin-bottom: 30px; } }
 
 .page {
   display: grid;
