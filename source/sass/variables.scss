@@ -5,6 +5,7 @@ $black: #000000;
 $black-almost:#1d1613;
 $grey: #9b9997;
 $grey-light: #e6e6e6;
+$white-dirty: #f0eae4;
 $white-almost: #f6f5f4;
 
 $white: #ffffff;
@@ -21,6 +22,7 @@ $cormorant-garamond: "Cormorant Garamond", "Times New Roman", serif;
 
 $mobile-width: 767px;
 $tablet-width: 1023px;
+$desktop-width-only: 1024px;
 $desktop-width-not-max: 1299px;
 
 // Blocks
@@ -29,10 +31,17 @@ $page--txt: $black-almost;
 $page--bg: $white;
 
 
+$blog-card--txt: $black;
+$blog-card--date-txt: $grey;
+$blog-card--bg: $white-dirty;
+$blog-card--link-hover: $site;
+$blog-card--decor: $site;
+
+$blog-preview--link-hover: $site;
+$blog-preview--decor: $site;
+
 $footer--txt: $white;
 $footer--bg: $black;
-
-
 $footer-menu--link: $white;
 $footer-menu--link-hover: $site;
 
