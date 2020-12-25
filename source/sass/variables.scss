@@ -20,7 +20,7 @@ $cormorant-garamond: "Cormorant Garamond", "Times New Roman", serif;
 
 $mobile-width: 767px;
 $tablet-width: 1023px;
-$desktop-width-not-max: 1199px;
+$desktop-width-not-max: 1299px;
 
 // Blocks
 
@@ -66,6 +66,7 @@ $navigation--menu-opened-bg: $site;
 
 $slogan--txt: $white;
 $slogan--bg: rgba($site-bright, 0.7);
+$slogan--img-bg: $site;
 $slogan--shadow: rgba($black, 0.25);
 
 $subscribe-txt: $white;

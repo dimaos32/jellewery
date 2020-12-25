@@ -71,9 +71,9 @@ img {
 
 .container {
   min-width: 320px;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 15px; }
+  padding: 0 65px; }
 
 @media (max-width: 1023px) {
   .container {
@@ -516,7 +516,7 @@ img {
     overflow: hidden; }
 
 .slogan {
-  background: url("../img/main-intro-desktop@1x.jpg") center/cover no-repeat; }
+  background: #a87b62 url("../img/main-intro-desktop@1x.jpg") center/cover no-repeat; }
 
 .slogan__wrapper {
   display: -webkit-box;
@@ -633,7 +633,7 @@ img {
       .subscribe .subscribe__form button:active {
         opacity: 0.6; }
 
-@media (max-width: 1199px) {
+@media (max-width: 1299px) {
   .subscribe {
     padding-right: 0; } }
 
