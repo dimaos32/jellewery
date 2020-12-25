@@ -515,7 +515,160 @@ img {
   .page--no-scroll {
     overflow: hidden; }
 
+.product-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 270px;
+  color: #1d1613; }
+  .product-card img {
+    display: block;
+    width: 270px;
+    height: 284px;
+    margin-bottom: 25px;
+    background-color: #e6e6e6;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: -webkit-transform 0.6s ease;
+    transition: -webkit-transform 0.6s ease;
+    transition: transform 0.6s ease;
+    transition: transform 0.6s ease, -webkit-transform 0.6s ease; }
+  .product-card h3 {
+    margin: auto 0 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center; }
+  .product-card p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: center; }
+  .product-card:hover, .product-card:focus {
+    color: #a87b62; }
+    .product-card:hover img, .product-card:focus img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+  .product-card:active {
+    opacity: 0.6; }
+
+.product-card__wrapper {
+  width: 270px;
+  height: 284px;
+  overflow: hidden; }
+
+.slider {
+  margin-bottom: 130px; }
+  .slider button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer; }
+
+.slider__container {
+  position: relative; }
+  .slider__container h2 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.3;
+    text-align: center; }
+  .slider__container > a {
+    position: relative;
+    display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto 50px;
+    padding: 10px;
+    color: #1d1613; }
+    .slider__container > a::after {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: calc(100% - 20px);
+      height: 1px;
+      background-color: #1d1613; }
+
+.slider__wrapper {
+  overflow: hidden;
+  width: 1170px;
+  margin: 0 auto; }
+
+.sllider__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+  padding: 0;
+  list-style: none; }
+  .sllider__list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    padding: 0 15px; }
+
+@media (max-width: 1023px) {
+  .slider {
+    margin-bottom: 80px; } }
+
+@media (max-width: 767px) {
+  .slider {
+    margin-bottom: 70px; } }
+
+.slider__control-arrow {
+  position: absolute;
+  top: 35px;
+  padding: 10px; }
+  .slider__control-arrow--left {
+    left: 55px; }
+  .slider__control-arrow--right {
+    right: 55px; }
+  .slider__control-arrow svg {
+    stroke: #a87b62; }
+  .slider__control-arrow:hover svg, .slider__control-arrow:focus svg {
+    stroke: #564034; }
+  .slider__control-arrow:active svg {
+    opacity: 0.6; }
+
+.slider__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  margin-top: 60px;
+  padding: 0;
+  list-style: none; }
+
+.slider__control-pagination {
+  padding: 10px 8px;
+  font: inherit;
+  color: #9b9997; }
+  .slider__control-pagination--current {
+    color: #1d1613; }
+  .slider__control-pagination:hover, .slider__control-pagination:focus {
+    color: #a87b62; }
+  .slider__control-pagination:active {
+    opacity: 0.6; }
+
 .slogan {
+  margin-bottom: 130px;
   background: #a87b62 url("../img/main-intro-desktop@1x.jpg") center/cover no-repeat; }
 
 .slogan__wrapper {
@@ -543,7 +696,7 @@ img {
     color: #ffffff; }
   .slogan__inner p {
     margin: 0;
-    font-family: Cormorant Garamond;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
     font-style: italic;
     font-weight: 400;
     font-size: 38px;
@@ -557,7 +710,11 @@ img {
 
 @media (max-width: 1023px) {
   .slogan {
-    background-image: url("../img/main-intro-tablet@1x.jpg"); } }
+    margin-bottom: 80px;
+    background-image: url("../img/main-intro-tablet@1x.jpg"); }
+  .slogan__wrapper {
+    -webkit-box-shadow: none;
+            box-shadow: none; } }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
   .slogan {
@@ -565,6 +722,7 @@ img {
 
 @media (max-width: 767px) {
   .slogan {
+    margin-bottom: 70px;
     background-image: url("../img/main-intro-mobile@1x.jpg"); }
   .slogan__inner {
     width: 280px; }

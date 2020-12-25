@@ -4,6 +4,7 @@ $black: #000000;
 
 $black-almost:#1d1613;
 $grey: #9b9997;
+$grey-light: #e6e6e6;
 $white-almost: #f6f5f4;
 
 $white: #ffffff;
@@ -63,6 +64,16 @@ $navigation--search-menu-opened-txt: $white;
 $navigation--search-menu-opened-bg: rgba($white, 0.15);
 $navigation--search-menu-opened-hover: $white;
 $navigation--menu-opened-bg: $site;
+
+$product-card-txt: $black-almost;
+$product-card-txt-hover: $site;
+$product-card-img-bg: $grey-light;
+
+$Slider--control-arrow: $site;
+$Slider--control-arrow-hover: $site-bright;
+$Slider--pagination-txt: $grey;
+$Slider--pagination-txt-current: $black-almost;
+$Slider--pagination-txt-hover: $site;
 
 $slogan--txt: $white;
 $slogan--bg: rgba($site-bright, 0.7);
