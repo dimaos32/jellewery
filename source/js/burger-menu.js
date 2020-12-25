@@ -1,7 +1,6 @@
 'use strict';
 
 (function () {
-
   var header = document.querySelector('.header');
   var menuToggle = header.querySelector('.header__menu-toggle');
   var navigation = header.querySelector('.navigation');
