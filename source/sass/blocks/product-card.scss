@@ -49,3 +49,35 @@
   height: 284px;
   overflow: hidden;
 }
+
+@media (max-width: $tablet-width) {
+  .product-card {
+    width: 324px;
+
+    img {
+      width: 324px;
+      height: 340px;
+    }
+  }
+
+  .product-card__wrapper {
+    width: 324px;
+    height: 340px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .product-card {
+    width: 130px;
+
+    img {
+      width: 130px;
+      height: 136px;
+    }
+  }
+
+  .product-card__wrapper {
+    width: 130px;
+    height: 136px;
+  }
+}

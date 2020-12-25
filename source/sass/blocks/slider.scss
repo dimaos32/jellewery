@@ -1,17 +1,12 @@
 .slider {
-  margin-bottom: 130px;
-
-  button {
-    display: block;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
+  margin-bottom: 120px;
 }
 
-.slider__container {
+.slider__wrapper {
   position: relative;
+  overflow: hidden;
+  width: 1170px;
+  margin: 0 auto;
 
   h2 {
     margin: 0;
@@ -34,19 +29,30 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 10px;
+      bottom: 5px;
       left: 10px;
       width: calc(100% - 20px);
       height: 1px;
-      background-color: $page--txt;
+      background-color: $slider--decor;
+    }
+
+    &:hover,
+    &:focus {
+      color: $slider--link-hover;
+    }
+
+    &:active {
+      opacity: 0.6;
     }
   }
-}
 
-.slider__wrapper {
-  overflow: hidden;
-  width: 1170px;
-  margin: 0 auto;
+  button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 .sllider__list {
@@ -62,39 +68,27 @@
   }
 }
 
-@media (max-width: $tablet-width) {
-  .slider {
-    margin-bottom: 80px;
-  }
-}
-
-@media (max-width: $mobile-width) {
-  .slider {
-    margin-bottom: 70px;
-  }
-}
-
 .slider__control-arrow {
   position: absolute;
   top: 35px;
   padding: 10px;
 
   &--left {
-    left: 55px;
+    left: -10px;
   }
 
   &--right {
-    right: 55px;
+    right: -10px;
   }
 
   svg {
-    stroke: $Slider--control-arrow;
+    stroke: $slider--control-arrow;
   }
 
   &:hover,
   &:focus {
     svg {
-      stroke: $Slider--control-arrow-hover;
+      stroke: $slider--control-arrow-hover;
     }
   }
 
@@ -110,7 +104,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
-  margin-top: 60px;
+  margin-top: 50px;
   padding: 0;
   list-style: none;
 }
@@ -118,18 +112,61 @@
 .slider__control-pagination {
   padding: 10px 8px;
   font: inherit;
-  color: $Slider--pagination-txt;
+  color: $slider--pagination-txt;
 
   &--current {
-    color: $Slider--pagination-txt-current;
+    color: $slider--pagination-txt-current;
   }
 
   &:hover,
   &:focus {
-    color: $Slider--pagination-txt-hover;
+    color: $slider--pagination-txt-hover;
   }
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+@media (max-width: $desktop-width-not-max) {
+  .slider__wrapper {
+    width: 870px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .slider {
+    margin-bottom: 70px;
+  }
+
+  .slider__wrapper {
+    width: 678px;
+  }
+
+  .slider__control-arrow {
+    top: 32px;
+
+    svg {
+      width: 37px;
+      height: 15px;
+    }
+  }
+
+  .slider__pagination {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .slider {
+    margin-bottom: 60px;
+  }
+
+  .slider__wrapper {
+    width: 290px;
+
+    .slider__control-arrow {
+      display: none;
+    }
   }
 }
