@@ -8,7 +8,6 @@
     display: block;
     width: 270px;
     height: 284px;
-    margin-bottom: 25px;
     background-color: $product-card-img-bg;
     object-fit: cover;
     transition: transform 0.6s ease;
@@ -45,9 +44,10 @@
 }
 
 .product-card__wrapper {
+  overflow: hidden;
   width: 270px;
   height: 284px;
-  overflow: hidden;
+  margin-bottom: 25px;
 }
 
 @media (max-width: $tablet-width) {
