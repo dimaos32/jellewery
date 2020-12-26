@@ -490,77 +490,54 @@ img {
     opacity: 0.6; }
 
 .galerry__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: -15px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 30px;
+  margin: -15px 0;
   outline: 4px dashed darkgreen; }
 
 .gallery__wrapper {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  --margin-shift: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 15px; }
+          flex-direction: column; }
+  .gallery__wrapper:last-of-type {
+    margin-left: calc(-1 * var(--margin-shift)); }
   .gallery__wrapper img {
     display: block;
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
+    max-width: 100%;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     margin: 15px 0; }
   .gallery__wrapper .gallery__img-5 {
-    max-width: calc(100% + 14px);
-    width: calc(100% + 14px);
-    margin-right: -14px; }
+    width: calc(100% - var(--margin-shift));
+    margin-right: var(--margin-shift); }
   .gallery__wrapper .gallery__img-6 {
-    max-width: calc(100% - 14px);
-    width: calc(100% - 14px);
-    margin-left: 14px; }
+    width: calc(100% - var(--margin-shift));
+    margin-left: var(--margin-shift); }
 
 @media (max-width: 1023px) {
   .gallery {
     margin-bottom: 80px; }
   .galerry__list {
-    margin: -9px; }
+    gap: 18px;
+    margin: -15px 0; }
   .gallery__wrapper {
-    margin: 0 9px; }
+    --margin-shift: 8px; }
     .gallery__wrapper img {
-      margin: 9px 0; }
-    .gallery__wrapper .gallery__img-5 {
-      max-width: calc(100% + 8px);
-      width: calc(100% + 8px);
-      margin-right: -8px; }
-    .gallery__wrapper .gallery__img-6 {
-      max-width: calc(100% - 8px);
-      width: calc(100% - 8px);
-      margin-left: 8px; } }
+      margin: 9px 0; } }
 
 @media (max-width: 767px) {
   .gallery {
-    margin-bottom: 70px; }
-  .galerry__list {
-    margin: -14px; }
-  .gallery__wrapper {
-    margin: 0 7px; }
-    .gallery__wrapper img {
-      margin: 7px 0; }
-    .gallery__wrapper .gallery__img-5 {
-      max-width: 100%;
-      width: 100%;
-      margin: 7px 0; }
-    .gallery__wrapper .gallery__img-6 {
-      max-width: 100%;
-      width: 100%;
-      margin: 7px 0; } }
+    margin-bottom: 70px; } }
 
 .header__top {
   padding: 30px 0;
