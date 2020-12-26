@@ -43,7 +43,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 6px;
+      top: 15px;
       right: 17px;
       width: 1px;
       height: 11px;
@@ -116,12 +116,52 @@
   .faq {
     margin-bottom: 85px;
   }
+
+  .faq__question {
+    padding: 30px 50px;
+
+    a {
+      &::before,
+      &::after {
+        right: 10px;
+        height: 17px;
+      }
+    }
+
+    p {
+      margin-left: 0;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
-  .product-card {
-    .faq {
-      margin-bottom: 70px;
+  .faq {
+    margin-bottom: 70px;
+  }
+
+  .faq__question {
+    padding: 5px 25px;
+
+    a {
+      &::before,
+      &::after {
+        right: 10px;
+        height: 17px;
+      }
+    }
+
+    h3 {
+      margin-right: 35px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin-top: 5px;
+      margin-right: 35px;
+      font-size: 14px;
+      line-height: 1.4;
     }
   }
 }
