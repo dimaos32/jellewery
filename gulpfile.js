@@ -36,6 +36,7 @@ gulp.task('javascript', function () {
   return gulp.src([
     './source/js/burger-menu.js',
     './source/js/faq.js',
+    './source/js/slider.js',
   ])
       .pipe(sourcemap.init())
       .pipe(concat('main.js'))
