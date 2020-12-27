@@ -1006,6 +1006,8 @@ img {
     border: none;
     outline: none;
     cursor: pointer; }
+    .slider__wrapper button.slider__control-arrow--nojs {
+      display: none; }
 
 .slider__list {
   display: -webkit-box;

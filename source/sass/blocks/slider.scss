@@ -52,6 +52,10 @@
     border: none;
     outline: none;
     cursor: pointer;
+
+    &.slider__control-arrow--nojs {
+      display: none;
+    }
   }
 }
 
@@ -66,8 +70,6 @@
     flex-shrink: 0;
     padding: 0 15px;
   }
-
-  // transform: translateX(-2400px);
 }
 
 .slider__control-arrow {
