@@ -21,7 +21,7 @@
           </svg>
         </label>
         <input type="search" id="#header-search" placeholder="Type here to search">
-        <button class="visually-hidden" type="submit">Find</button>
+        <button class="visually-hidden" type="submit" tabindex="-1">Find</button>
       </form>
 
       <a class="header__logo logo" aria-label="Logotype CH">
@@ -118,6 +118,19 @@
   <div class="slider__wrapper">
     <h2>New In</h2>
     <a href="#" class="slider__catalog-link">Shop Now</a>
+
+    <button class="slider__control-arrow slider__control-arrow--preview slider__control-arrow--nojs" type="button">
+      <svg viewbox="0 0 30 10" width="29" height="9" preserveAspectRatio="xMinYMid slice">
+        <line x1="1" y1="5" x2="29" y2="5"></line>
+        <polyline points="6,1 1,5 6,9" fill="none"></polyline>
+      </svg>
+    </button>
+    <button class="slider__control-arrow slider__control-arrow--next slider__control-arrow--nojs" type="button">
+      <svg viewbox="0 0 30 10" width="29" height="9" preserveAspectRatio="xMaxYMid slice">
+        <line x1="1" y1="5" x2="29" y2="5"></line>
+        <polyline points="24,1 29,5 24,9" fill="none"></polyline>
+      </svg>
+    </button>
 
     <ul class="slider__list">
       <li>
@@ -321,19 +334,6 @@
       </li>
     </ul>
 
-    <button class="slider__control-arrow slider__control-arrow--preview slider__control-arrow--nojs" type="button">
-      <svg viewbox="0 0 30 10" width="29" height="9" preserveAspectRatio="xMinYMid slice">
-        <line x1="1" y1="5" x2="29" y2="5"></line>
-        <polyline points="6,1 1,5 6,9" fill="none"></polyline>
-      </svg>
-    </button>
-    <button class="slider__control-arrow slider__control-arrow--next slider__control-arrow--nojs" type="button">
-      <svg viewbox="0 0 30 10" width="29" height="9" preserveAspectRatio="xMaxYMid slice">
-        <line x1="1" y1="5" x2="29" y2="5"></line>
-        <polyline points="24,1 29,5 24,9" fill="none"></polyline>
-      </svg>
-    </button>
-
     <ul class="slider__pagination">
     </ul>
   </div>
@@ -446,8 +446,8 @@
 
 <section class="gallery">
   <div class="container">
-    <h2>@Chjewellery</h2>
-    <a href="#" class="gallery__link">Shop Now</a>
+    <h2><span>@</span>Chjewellery</h2>
+    <a href="#" class="gallery__link">Follow us</a>
 
     <div class="galerry__list">
       <div class="gallery__wrapper">

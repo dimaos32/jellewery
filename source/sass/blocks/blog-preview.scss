@@ -1,9 +1,9 @@
 .blog-preview {
-  margin-bottom: 130px;
+  margin-bottom: 120px;
 
   h2 {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     font-family: $cormorant-garamond;
     font-weight: 700;
     font-size: 34px;
@@ -16,9 +16,10 @@
   position: relative;
   display: block;
   width: max-content;
-  margin: 0 auto 60px;
+  margin: 0 auto 55px;
   padding: 10px;
   color: $page--txt;
+  outline: none;
 
   &::after {
     content: "";

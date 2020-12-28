@@ -13,15 +13,17 @@
 }
 
 .footer-menu__list {
-  margin: -12px 0;
+  margin: -15px 0;
   padding: 0;
+  padding-left: 8px;
   list-style: none;
   width: 180px;
 
   .footer-menu__link {
     display: block;
-    padding: 12px 0;
+    padding: 11px 0;
     color: $footer-menu--link;
+    outline: none;
 
     &:hover,
     &:focus {
@@ -44,8 +46,9 @@
 
 .footer-menu__social-link {
   display: block;
-  padding: 12px 0;
+  padding: 11px 0;
   color: $footer-menu--link;
+  outline: none;
 
   svg {
     width: 15px;

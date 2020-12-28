@@ -1,11 +1,11 @@
 .header__top {
-  padding: 30px 0;
+  padding: 30px 0 18px;
   border-bottom: 1px solid $header--border;
 
   .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -30,12 +30,12 @@
 
   input {
     width: 300px;
-    padding: 15px;
+    padding: 8px;
     padding-left: 30px;
     padding-right: 0;
     font: inherit;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 2;
     border: none;
     outline: none;
 
@@ -72,10 +72,12 @@
 
   a {
     display: block;
-    padding: 15px;
+    margin-left: 5px;
+    padding: 13px 15px;
     font-size: 14px;
     line-height: 1.5;
     color: $header--user-interface-link;
+    outline: none;
 
     &:hover,
     &:focus {
@@ -84,6 +86,10 @@
 
     &:active {
       opacity: 0.6;
+    }
+
+    output {
+      margin-left: 2px;
     }
   }
 }
