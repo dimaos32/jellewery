@@ -141,11 +141,19 @@
 
 @media (max-width: $tablet-width) {
   .slider {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
   }
 
   .slider__wrapper {
     width: 708px;
+
+    h2 {
+      margin-bottom: 8px;
+    }
+  }
+
+  .slider__catalog-link {
+    margin-bottom: 45px;
   }
 
   .slider__control-arrow {
@@ -158,7 +166,7 @@
   }
 
   .slider__pagination {
-    margin-top: 40px;
+    margin-top: 35px;
   }
 }
 

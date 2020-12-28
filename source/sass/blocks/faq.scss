@@ -45,8 +45,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: 15px;
-      right: 17px;
+      top: 18px;
+      right: 16px;
       width: 1px;
       height: 11px;
       background-color: $faq--question-link;
@@ -91,7 +91,7 @@
 
     a::before,
     a::after {
-      transform-origin: (center top);
+      transform-origin: (center bottom);
     }
   }
 
@@ -104,18 +104,18 @@
 
     a::before,
     a::after {
-      transform-origin: (center bottom);
+      transform-origin: (center top);
     }
   }
 }
 
 @media (max-width: $tablet-width) {
   .faq {
-    margin-bottom: 85px;
+    margin-bottom: 65px;
   }
 
   .faq__question {
-    padding: 30px 50px;
+    padding: 28px 50px;
 
     a {
       &::before,
@@ -125,8 +125,18 @@
       }
     }
 
+    h3 {
+      margin-left: 0;
+    }
+
     p {
       margin-left: 0;
+    }
+
+    &--opened {
+      p {
+        margin-top: 10px;
+      }
     }
   }
 }

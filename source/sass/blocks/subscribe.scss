@@ -17,60 +17,60 @@
     font-weight: 400;
     color: $subscribe-txt-alt;
   }
+}
 
-  .subscribe__form {
-    position: relative;
-    margin-top: 30px;
+.subscribe__form {
+  position: relative;
+  margin-top: 30px;
 
-    input {
-      width: 100%;
-      padding: 10px 0;
-      font: inherit;
-      font-size: 14px;
-      line-height: 1.5;
-      color: $subscribe-txt;
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid $subscribe-border;
-      outline: none;
+  input {
+    width: 100%;
+    padding: 10px 0;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $subscribe-txt;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $subscribe-border;
+    outline: none;
 
-      &:hover,
-      &:focus {
-        border-color: $subscribe-border-hover;
+    &:hover,
+    &:focus {
+      border-color: $subscribe-border-hover;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 10px 0;
+    font: inherit;
+    font-size: 16px;
+    line-height: 1.3;
+    color: $subscribe-txt;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    svg {
+      margin-left: 7px;
+      stroke: $subscribe-txt;
+    }
+
+    &:hover,
+    &:focus {
+      color: $subscribe-txt-hover;
+
+      svg {
+        stroke: $subscribe-txt-hover;
       }
     }
 
-    button {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      padding: 10px 0;
-      font: inherit;
-      font-size: 16px;
-      line-height: 1.3;
-      color: $subscribe-txt;
-      background-color: transparent;
-      border: none;
-      outline: none;
-
-      svg {
-        margin-left: 7px;
-        stroke: $subscribe-txt;
-      }
-
-      &:hover,
-      &:focus {
-        color: $subscribe-txt-hover;
-
-        svg {
-          stroke: $subscribe-txt-hover;
-        }
-      }
-
-      &:active {
-        opacity: 0.6;
-      }
+    &:active {
+      opacity: 0.6;
     }
   }
 }
@@ -78,6 +78,11 @@
 @media (max-width: $desktop-width-not-max) {
   .subscribe {
     padding-right: 0;
+  }
+
+  .subscribe__form {
+    margin-top: 33px;
+    margin-right: 10px;
   }
 }
 

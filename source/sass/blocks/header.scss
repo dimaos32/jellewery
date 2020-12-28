@@ -101,6 +101,8 @@
 
 @media (max-width: $tablet-width) {
   .header {
+    z-index: 1;
+
     &--menu-closed {
       position: static;
     }
@@ -119,6 +121,7 @@
   }
 
   .header__top {
+    padding-bottom: 30px;
     position: relative;
     border-bottom: none;
 
@@ -131,7 +134,7 @@
     display: block;
     position: absolute;
     top: 50%;
-    left: 45px;
+    left: 35px;
     transform: translateY(-50%);
     width: 45px;
     height: 40px;

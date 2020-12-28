@@ -14,9 +14,21 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .footer {
+    padding: 0;
+    padding-top: 60px;
+  }
+
+  .footer__container {
+    section {
+      width: 570px;
+    }
+  }
+}
+
 @media (max-width: $mobile-width) {
   .footer {
-    padding: 60px 0 10px;
     color: $footer--txt;
     background-color: $footer--bg;
   }

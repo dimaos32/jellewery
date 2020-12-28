@@ -85,7 +85,15 @@
 
 @media (max-width: $tablet-width) {
   .gallery {
-    margin-bottom: 80px;
+    margin-bottom: 85px;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .gallery__link {
+    margin-bottom: 60px;
   }
 
   .galerry__list {

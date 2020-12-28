@@ -71,6 +71,16 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .footer-menu__list {
+    padding-left: 0;
+  }
+
+  .footer-menu__navigation {
+    width: 435px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .footer-menu {
     flex-direction: column;
