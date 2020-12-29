@@ -525,7 +525,7 @@ img {
   .gallery__link:active {
     opacity: 0.6; }
 
-.galerry__list {
+.gallery__list {
   display: grid;
   grid-template-columns: repeat(4, auto);
   gap: 30px;
@@ -566,7 +566,7 @@ img {
       margin-bottom: 10px; }
   .gallery__link {
     margin-bottom: 60px; }
-  .galerry__list {
+  .gallery__list {
     gap: 18px;
     margin: -15px 0; }
   .gallery__wrapper {
@@ -579,7 +579,7 @@ img {
     margin-bottom: 70px; }
   .gallery__link {
     margin-bottom: 40px; }
-  .galerry__list {
+  .gallery__list {
     grid-template-columns: repeat(2, auto);
     gap: 0 15px;
     margin: -7px 0 -8px; }
