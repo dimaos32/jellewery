@@ -172,11 +172,19 @@
 
 @media (max-width: $mobile-width) {
   .slider {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   .slider__wrapper {
     width: 320px;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .slider__catalog-link {
+      margin-bottom: 35px;
+    }
 
     .slider__control-arrow {
       display: none;

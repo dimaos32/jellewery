@@ -112,6 +112,10 @@
 @media (max-width: $tablet-width) {
   .faq {
     margin-bottom: 65px;
+
+    h2 {
+      margin-bottom: 30px;
+    }
   }
 
   .faq__question {
@@ -143,17 +147,18 @@
 
 @media (max-width: $mobile-width) {
   .faq {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   .faq__question {
     padding: 5px 25px;
 
     a {
+      padding: 10px 0;
       &::before,
       &::after {
-        right: 10px;
-        height: 17px;
+        right: 9px;
+        height: 14px;
       }
     }
 

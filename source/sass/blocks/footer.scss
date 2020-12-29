@@ -29,6 +29,7 @@
 
 @media (max-width: $mobile-width) {
   .footer {
+    padding-bottom: 5px;
     color: $footer--txt;
     background-color: $footer--bg;
   }

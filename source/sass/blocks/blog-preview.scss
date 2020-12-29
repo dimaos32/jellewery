@@ -63,10 +63,14 @@
 
 @media (max-width: $mobile-width) {
   .blog-preview {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
+  }
+
+  .blog-preview__list {
+    gap: 40px;
   }
 
   .blog-preview__blog-link {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 }

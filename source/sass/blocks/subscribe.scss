@@ -90,6 +90,11 @@
   .subscribe {
     p {
       width: 240px;
+      margin-bottom: 15px;
     }
+  }
+
+  .subscribe__form {
+    margin-right: 0;
   }
 }
