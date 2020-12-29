@@ -1,0 +1,6 @@
+.btn {
+
+  @media (min-width: $desktop-width-only) {
+    display: none;
+  }
+}

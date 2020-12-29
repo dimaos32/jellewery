@@ -8,7 +8,7 @@
   img {
     display: block;
     width: 270px;
-    height: 284px;
+    height: 272px;
     background-color: $product-card-img-bg;
     object-fit: cover;
     transition: transform 0.6s ease;
@@ -42,13 +42,23 @@
   &:active {
     opacity: 0.6;
   }
+
+  &--slider {
+    img {
+    height: 284px;
+    }
+  }
 }
 
 .product-card__wrapper {
   overflow: hidden;
   width: 270px;
-  height: 284px;
+  height: 272px;
   margin-bottom: 22px;
+
+  .product-card--slider & {
+    height: 284px;
+  }
 }
 
 @media (max-width: $tablet-width) {
