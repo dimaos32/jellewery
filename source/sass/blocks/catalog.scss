@@ -6,8 +6,190 @@
 }
 
 .catalog__filter {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
 
-  outline: 2px dashed salmon;
+  fieldset {
+    position: relative;
+    margin: 0;
+    margin-bottom: -1px;
+    padding: 20px 35px;
+    padding-top: 50px;
+    border: 1px solid $catalog--filter-border;
+  }
+
+  .catalog__price-filter {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  legend {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    padding: 0;
+  }
+
+  ul {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+  }
+
+  li:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
+
+  label {
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 1.3;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $catalog--filter-input;
+    }
+  }
+
+  input:checked + label {
+    &::before {
+      background-color: $catalog--filter-input;
+    }
+  }
+
+  input:hover + label,
+  input:focus + label {
+    color: $catalog--filter-input-hover;
+
+    &::before {
+      border-color: $catalog--filter-input-hover;
+    }
+  }
+
+  input:checked:hover + label,
+  input:checked:focus + label {
+    &::before {
+      background-color: $catalog--filter-input-hover;
+    }
+  }
+
+  input:disabled + label {
+    opacity: 0.6;
+  }
+
+  input:disabled:hover + label {
+    color: $page--txt;
+
+    &::before {
+      border-color: $catalog--filter-input;
+    }
+  }
+
+  input:disabled:checked:hover + label {
+    &::before {
+      background-color: $catalog--filter-input;
+      border-color: $catalog--filter-input;
+    }
+  }
+}
+
+.catalog__range-filter {
+  margin-top: 20px;
+}
+
+.catalog__range-controls {
+  margin-bottom: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.catalog__range-scale {
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: $catalog--filter-range-scale;
+}
+
+.catalog__range-bar {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: $catalog--filter-range-bar;
+}
+
+.catalog__range-toggle {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 15px;
+  height: 15px;
+  background-color: $catalog--filter-range-toggle;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+
+  &--min {
+    left: -7px;
+  }
+
+  &--max {
+    right: -7px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $catalog--filter-range-toggle-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.catalog__price-controls {
+  display: flex;
+  justify-content: space-around;
+
+  div {
+    font-size: 0;
+  }
+
+  span {
+    font-size: 14px;
+  }
+
+  input {
+    width: 40px;
+    font: inherit;
+    font-size: 14px;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $catalog--filter-input-hover;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+.catalog__filter-controls {
+  margin-top: 10px;
+
+  button {
+    margin-top: 25px;
+  }
 }
 
 .catalog__list {
@@ -22,6 +204,58 @@
 
 .catalog__pagination {
   border-top: 1px solid $catalog--border;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.catalog__pagination-preview,
+.catalog__pagination-next {
+  display: block;
+  padding: 10px;
+  color: $page--txt;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $catalog--pagination-link-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.catalog__pagination-page {
+  display: block;
+  padding: 10px 7px;
+  color: $catalog--pagination-link;
+  outline: none;
+
+  &[href]:hover,
+  &:focus {
+    color: $catalog--pagination-link-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--current {
+    color: $page--txt;
+  }
+}
+
+.catalog__pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 290px;
+  margin-right: -10px;
 }
 
 @media (min-width: $desktop-width-only) {
@@ -29,6 +263,12 @@
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 50px;
+  }
+
+  .catalog__filter {
+    a {
+      display: none;
+    }
   }
 }
 

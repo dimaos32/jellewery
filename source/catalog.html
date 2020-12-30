@@ -123,19 +123,19 @@
         <legend>Product</legend>
         <ul>
           <li>
-            <input type="checkbox" name="necklaces" id="necklaces" checked>
+            <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" checked>
             <label for="necklaces">Necklaces</label>
           </li>
           <li>
-            <input type="checkbox" name="chokers" id="chokers" checked>
+            <input class="visually-hidden" type="checkbox" name="chokers" id="chokers" checked>
             <label for="chokers">Chokers</label>
           </li>
           <li>
-            <input type="checkbox" name="rings" id="rings">
+            <input class="visually-hidden" type="checkbox" name="rings" id="rings">
             <label for="rings">Rings</label>
           </li>
           <li>
-            <input type="checkbox" name="earrings" id="earrings" checked>
+            <input class="visually-hidden" type="checkbox" name="earrings" id="earrings" checked>
             <label for="earrings">Earrings</label>
           </li>
         </ul>
@@ -145,11 +145,11 @@
         <legend>Material</legend>
         <ul>
           <li>
-            <input type="checkbox" name="gold" id="gold" checked>
+            <input class="visually-hidden" type="checkbox" name="gold" id="gold" checked>
             <label for="gold">Gold</label>
           </li>
           <li>
-            <input type="checkbox" name="silver" id="silver">
+            <input class="visually-hidden" type="checkbox" name="silver" id="silver">
             <label for="silver">Silver</label>
           </li>
         </ul>
@@ -159,40 +159,48 @@
         <legend>Collection</legend>
         <ul>
           <li>
-            <input type="checkbox" name="pink-flamingo" id="pink-flamingo" checked>
+            <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo" checked>
             <label for="pink-flamingo">Pink flamingo</label>
           </li>
           <li>
-            <input type="checkbox" name="dreams" id="dreams">
+            <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
             <label for="dreams">Dreams</label>
           </li>
         </ul>
       </fieldset>
 
-      <fieldset>
+      <fieldset class="catalog__price-filter">
         <legend>Price</legend>
-        <div class="range-filter">
-          <div class="range-controls">
-            <div class="scale">
-              <div class="bar" style="
-                width: 85%;
-                margin-left: 0%
-              "></div>
-              <div class="toggle toggle-min" tabindex="0" aria-label="Установить минимальную цену" style="
-                left: calc(0% - 10px)
-              "></div>
-              <div class="toggle toggle-max" tabindex="0" aria-label="Установить максимальную цену" style="
-                left: calc(85% - 10px)
-              "></div>
+        <div class="catalog__range-filter">
+          <div class="catalog__range-controls">
+            <div class="catalog__range-scale">
+              <div class="catalog__range-bar" style="
+                width: 60%;
+                margin-left: 20%;
+              ">
+                <div class="catalog__range-toggle catalog__range-toggle--min" tabindex="0" aria-label="Установить минимальную цену"></div>
+                <div class="catalog__range-toggle catalog__range-toggle--max" tabindex="0" aria-label="Установить максимальную цену"></div>
+              </div>
             </div>
           </div>
-          <div class="price-controls">
-              <input type="text" name="min-price" value="0" pattern="[0-9]{1,}">
-              <span>-</span>
-              <input type="text" name="max-price" value="30000" pattern="[0-9]{1,}">
+          <div class="catalog__price-controls">
+            <div>
+              <span>$</span>
+              <input type="text" name="catalog__min-price" value="50" pattern="[0-9]{1,3}">
+            </div>
+
+            <div>
+              <span>$</span>
+              <input type="text" name="catalog__max-price" value="200" pattern="[0-9]{1,3}">
+            </div>
           </div>
         </div>
       </fieldset>
+
+      <div class="catalog__filter-controls">
+        <button class="btn" type="submit">Apply</button>
+        <button class="btn btn--light" type="reset">Clear All</button>
+      </div>
     </form>
 
     <ul class="catalog__list">
@@ -511,24 +519,30 @@
   </div>
 
   <div class="catalog__pagination">
-    <div class="container">
-      <ul>
-        <li>
-          <a class="catalog__control-pagination catalog__control-pagination--current">1</a>
-        </li>
-        <li>
-          <a class="catalog__control-pagination">2</a>
-        </li>
-        <li>
-          <a class="catalog__control-pagination">3</a>
-        </li>
-        <li>
-          <a class="catalog__control-pagination">4</a>
-        </li>
-        <li>
-          <a class="catalog__control-pagination">5</a>
-        </li>
-      </ul>
+    <div class="catalog__pagination-container container">
+      <div class="catalog__pagination-wrapper">
+        <a class="catalog__pagination-preview" href="#">Previous</a>
+
+        <ul>
+          <li>
+            <a class="catalog__pagination-page catalog__pagination-page--current">1</a>
+          </li>
+          <li>
+            <a class="catalog__pagination-page" href="#">2</a>
+          </li>
+          <li>
+            <a class="catalog__pagination-page" href="#">3</a>
+          </li>
+          <li>
+            <a class="catalog__pagination-page" href="#">4</a>
+          </li>
+          <li>
+            <a class="catalog__pagination-page" href="#">5</a>
+          </li>
+        </ul>
+
+        <a class="catalog__pagination-next" href="#">Next</a>
+      </div>
     </div>
   </div>
 

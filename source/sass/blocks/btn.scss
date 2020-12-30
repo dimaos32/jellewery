@@ -1,6 +1,30 @@
 .btn {
+  display: block;
+  width: 100%;
+  padding: 23px 40px;
+  font: inherit;
+  color: $btn--txt;
+  background-color: $btn--bg;
+  border: 1px solid $btn--border;
+  outline: none;
 
-  @media (min-width: $desktop-width-only) {
-    display: none;
+  &:hover,
+  &:focus {
+    background-color: $btn--bg-hover;
+    border-color: $btn--border-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--light {
+    color: $page--txt;
+    background-color: $page--bg;
+
+    &:hover,
+    &:focus {
+      color: $btn--txt;
+    }
   }
 }

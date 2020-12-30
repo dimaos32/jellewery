@@ -31,6 +31,13 @@ $page--txt: $black-almost;
 $page--bg: $white;
 
 
+$btn--txt: $white;
+$btn--bg: $site;
+$btn--bg-hover: $site-bright;
+$btn--border: $site;
+$btn--border-hover: $site-bright;
+
+
 $blog-card--txt: $black;
 $blog-card--date-txt: $grey;
 $blog-card--bg: $white-dirty;
@@ -41,6 +48,15 @@ $blog-preview--link-hover: $site;
 $blog-preview--decor: $site;
 
 $catalog--border: $white-almost;
+$catalog--filter-border: $site;
+$catalog--filter-input: $site;
+$catalog--filter-input-hover: $site-bright;
+$catalog--filter-range-scale: $white-dirty;
+$catalog--filter-range-bar: $site;
+$catalog--filter-range-toggle: $site;
+$catalog--filter-range-toggle-hover: $site-bright;
+$catalog--pagination-link: $grey;
+$catalog--pagination-link-hover: $site;
 
 $faq--question-border: $site;
 $faq--question-link: $site;
