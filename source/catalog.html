@@ -119,8 +119,8 @@
     <a class="btn btn--catalog-filter catalog__filter-btn" href="#">Filter</a>
 
     <form class="catalog__filter" action="https://echo.htmlacademy.ru" method="GET">
-      <fieldset>
-        <legend>Product</legend>
+      <fieldset class="catalog__filter-fildset catalog__filter-fildset--opened">
+        <legend tabindex="0">Product</legend>
         <ul>
           <li>
             <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" checked>
@@ -141,8 +141,8 @@
         </ul>
       </fieldset>
 
-      <fieldset>
-        <legend>Material</legend>
+      <fieldset class="catalog__filter-fildset catalog__filter-fildset--closed">
+        <legend tabindex="0">Material</legend>
         <ul>
           <li>
             <input class="visually-hidden" type="checkbox" name="gold" id="gold" checked>
@@ -155,8 +155,8 @@
         </ul>
       </fieldset>
 
-      <fieldset>
-        <legend>Collection</legend>
+      <fieldset class="catalog__filter-fildset catalog__filter-fildset--closed">
+        <legend tabindex="0">Collection</legend>
         <ul>
           <li>
             <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo" checked>
@@ -169,8 +169,8 @@
         </ul>
       </fieldset>
 
-      <fieldset class="catalog__price-filter">
-        <legend>Price</legend>
+      <fieldset class="catalog__filter-fildset catalog__filter-fildset--opened catalog__price-filter">
+        <legend tabindex="0">Price</legend>
         <div class="catalog__range-filter">
           <div class="catalog__range-controls">
             <div class="catalog__range-scale">
