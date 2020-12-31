@@ -1,10 +1,18 @@
 .header__top {
-  padding: 30px 0 18px;
+  padding: 30px 0;
   border-bottom: 1px solid $header--border;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
+  .header--main-page & {
+    padding-bottom: 18px;
+  }
+}
+
+.header__top__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header--main-page & {
     align-items: flex-start;
   }
 }
