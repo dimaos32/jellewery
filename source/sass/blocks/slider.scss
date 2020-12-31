@@ -119,11 +119,12 @@
   font: inherit;
   color: $slider--pagination-txt;
 
-  &--current {
+  &:disabled {
     color: $slider--pagination-txt-current;
+    cursor: default;
   }
 
-  &:hover,
+  &:not(:disabled):hover,
   &:focus {
     color: $slider--pagination-txt-hover;
   }

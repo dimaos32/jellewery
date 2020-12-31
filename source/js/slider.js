@@ -22,7 +22,7 @@
     var nextSlideBtn = sliderFrame.querySelector('.slider__control-arrow--next');
     var pagination = sliderFrame.querySelector('.slider__pagination');
     var paginationBtns = pagination.querySelectorAll('.slider__control-pagination');
-    var currentPaginationBtn = pagination.querySelector('.slider__control-pagination--current');
+    var currentPaginationBtn = pagination.querySelector('.slider__control-pagination:disabled');
 
     var currentSliderFrameWidth = sliderFrame.offsetWidth;
 
@@ -57,7 +57,7 @@
           pageBtn.classList.add('slider__control-pagination');
 
           if (i === 0) {
-            pageBtn.classList.add('slider__control-pagination--current');
+            pageBtn.disabled = true;
           }
 
           pageElement.append(pageBtn);
@@ -92,6 +92,7 @@
 
     var changeSlide = function () {
       var shift = currentSliderFrameWidth * currentSlide;
+      var target;
 
       if (isMobile) {
         var currentPaginationPage = pagination.querySelector('span');
@@ -100,12 +101,12 @@
       } else {
         paginationBtns = pagination.querySelectorAll('.slider__control-pagination');
 
-        var target = getTargetPaginationBtn();
+        target = getTargetPaginationBtn();
 
-        currentPaginationBtn = pagination.querySelector('.slider__control-pagination--current');
+        currentPaginationBtn = pagination.querySelector('.slider__control-pagination:disabled');
 
-        currentPaginationBtn.classList.remove('slider__control-pagination--current');
-        target.classList.add('slider__control-pagination--current');
+        currentPaginationBtn.disabled = false;
+        target.disabled = true;
       }
 
       slider.style.transform = 'translate(-' + shift + 'px)';
@@ -114,21 +115,17 @@
     var switchPreviewSlide = function () {
       paginationBtns = pagination.querySelectorAll('.slider__control-pagination');
 
-      var target = getTargetPaginationBtn();
-
       if (currentSlide === 0) {
         currentSlide = slidesQuantity;
       }
 
       currentSlide--;
 
-      changeSlide(target);
+      changeSlide();
     };
 
     var switchNextSlide = function () {
       paginationBtns = pagination.querySelectorAll('.slider__control-pagination');
-
-      var target = getTargetPaginationBtn();
 
       currentSlide++;
 
@@ -136,7 +133,7 @@
         currentSlide = 0;
       }
 
-      changeSlide(target);
+      changeSlide();
     };
 
     var onWindowResize = function () {
@@ -154,11 +151,11 @@
       switchNextSlide();
     };
 
-    var onTouchStart = function (evt) {
+    var onSliderTouchStart = function (evt) {
       fingerDounX = evt.touches[0].clientX;
     };
 
-    var onTouchMove = function (evt) {
+    var onSliderTouchMove = function (evt) {
       if (!fingerDounX) {
         return;
       }
@@ -175,14 +172,27 @@
       fingerDounX = null;
     };
 
+    var onSliderFocus = function (evt) {
+      var target = evt.target.closest('.slider__list li');
+      var targetPos = Array.from(products).indexOf(target);
+      var targetSlide = Math.floor(targetPos / getProductsPerFrame());
+
+      if (currentSlide !== targetSlide) {
+        currentSlide = targetSlide;
+        changeSlide();
+        document.querySelector('.slider').append(sliderFrame);
+        evt.target.focus();
+      }
+    };
+
     var onPaginationClick = function (evt) {
       var target = evt.target.closest('.slider__control-pagination');
 
-      currentPaginationBtn = pagination.querySelector('.slider__control-pagination--current');
+      currentPaginationBtn = pagination.querySelector('.slider__control-pagination:disabled');
 
       if (target && target !== currentPaginationBtn) {
         currentSlide = target.dataset.page;
-        changeSlide(target);
+        changeSlide();
       }
     };
 
@@ -193,8 +203,10 @@
     previewSlideBtn.addEventListener('click', onPreviewSlideBtnClick);
     nextSlideBtn.addEventListener('click', onNextSlideBtnClick);
 
-    slider.addEventListener('touchstart', onTouchStart, false);
-    slider.addEventListener('touchmove', onTouchMove, false);
+    slider.addEventListener('touchstart', onSliderTouchStart);
+    slider.addEventListener('touchmove', onSliderTouchMove);
+
+    slider.addEventListener('focusin', onSliderFocus);
 
     pagination.addEventListener('click', onPaginationClick);
   }

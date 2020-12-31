@@ -1585,9 +1585,10 @@ img {
   padding: 8px 6px;
   font: inherit;
   color: #9b9997; }
-  .slider__control-pagination--current {
-    color: #1d1613; }
-  .slider__control-pagination:hover, .slider__control-pagination:focus {
+  .slider__control-pagination:disabled {
+    color: #1d1613;
+    cursor: default; }
+  .slider__control-pagination:not(:disabled):hover, .slider__control-pagination:focus {
     color: #a87b62; }
   .slider__control-pagination:active {
     opacity: 0.6; }
