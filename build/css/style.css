@@ -1249,7 +1249,12 @@ img {
   .logo svg {
     display: block;
     width: 66px;
-    height: 66px; }
+    height: 66px;
+    fill: #a87b62; }
+  .logo[href]:hover svg, .logo[href]:focus svg {
+    fill: #564034; }
+  .logo[href]:active {
+    opacity: 0.6; }
 
 @media (max-width: 767px) {
   .logo svg {

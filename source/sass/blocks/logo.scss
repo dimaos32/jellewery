@@ -5,6 +5,18 @@
     display: block;
     width: 66px;
     height: 66px;
+    fill: $site;
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    svg {
+      fill: $site-bright;
+    }
+  }
+
+  &[href]:active {
+    opacity: 0.6;
   }
 }
 

@@ -15,20 +15,43 @@
         target.classList.toggle('catalog__filter-fildset--opened');
         target.classList.toggle('catalog__filter-fildset--closed');
       }
+
+      if (evt.target === catalogFilter) {
+        closeFilter();
+      }
     };
 
-    var oncatalogFilterOpenBtnClick = function (evt) {
-      evt.preventDefault();
+    var onOpenFilterEscPress = function (evt) {
+      if (evt.key === 'Escape') {
+        evt.preventDefault();
+        closeFilter();
+      }
+    };
 
+    var closeFilter = function () {
+      catalogFilter.classList.remove('catalog__filter-overlay--opened');
+      catalogFilter.classList.add('catalog__filter-overlay--closed');
+
+      catalogFiltercloseBtn.removeEventListener('click', oncatalogFiltercloseBtnClick);
+      document.removeEventListener('keydown', onOpenFilterEscPress);
+    }
+
+    var openFilter = function () {
       catalogFilter.classList.add('catalog__filter-overlay--opened');
       catalogFilter.classList.remove('catalog__filter-overlay--closed');
 
       catalogFiltercloseBtn.addEventListener('click', oncatalogFiltercloseBtnClick);
+      document.addEventListener('keydown', onOpenFilterEscPress);
+    }
+
+    var oncatalogFilterOpenBtnClick = function (evt) {
+      evt.preventDefault();
+
+      openFilter();
     };
 
     var oncatalogFiltercloseBtnClick = function () {
-      catalogFilter.classList.remove('catalog__filter-overlay--opened');
-      catalogFilter.classList.add('catalog__filter-overlay--closed');
+      closeFilter();
 
       catalogFiltercloseBtn.removeEventListener('click', oncatalogFiltercloseBtnClick);
     };
