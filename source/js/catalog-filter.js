@@ -4,7 +4,8 @@
   if (document.querySelector('.catalog__filter')) {
     var catalogFilter = document.querySelector('.catalog__filter-overlay');
     var catalogFilterOpenBtn = document.querySelector('.catalog__filter-open-btn');
-    var catalogFiltercloseBtn = document.querySelector('.catalog__filter-close-btn');
+    var catalogFilterCloseBtn = document.querySelector('.catalog__filter-close-btn');
+    var catalogFilterFirstActiveElement = document.querySelector('.catalog__filter legend');
 
     var onCatalogFilterClick = function (evt) {
       var target = evt.target.closest('.catalog__filter-fildset');
@@ -32,17 +33,19 @@
       catalogFilter.classList.remove('catalog__filter-overlay--opened');
       catalogFilter.classList.add('catalog__filter-overlay--closed');
 
-      catalogFiltercloseBtn.removeEventListener('click', oncatalogFiltercloseBtnClick);
+      catalogFilterCloseBtn.removeEventListener('click', oncatalogFilterCloseBtnClick);
       document.removeEventListener('keydown', onOpenFilterEscPress);
-    }
+    };
 
     var openFilter = function () {
       catalogFilter.classList.add('catalog__filter-overlay--opened');
       catalogFilter.classList.remove('catalog__filter-overlay--closed');
 
-      catalogFiltercloseBtn.addEventListener('click', oncatalogFiltercloseBtnClick);
+      catalogFilterCloseBtn.addEventListener('click', oncatalogFilterCloseBtnClick);
+      catalogFilterFirstActiveElement.addEventListener('focusout', onCatalogFilterFirstActiveElementFocusout);
+      catalogFilterCloseBtn.addEventListener('focusout', onCatalogFilterCloseBtnFocusout);
       document.addEventListener('keydown', onOpenFilterEscPress);
-    }
+    };
 
     var oncatalogFilterOpenBtnClick = function (evt) {
       evt.preventDefault();
@@ -50,10 +53,34 @@
       openFilter();
     };
 
-    var oncatalogFiltercloseBtnClick = function () {
+    var oncatalogFilterCloseBtnClick = function () {
       closeFilter();
 
-      catalogFiltercloseBtn.removeEventListener('click', oncatalogFiltercloseBtnClick);
+      catalogFilterCloseBtn.removeEventListener('click', oncatalogFilterCloseBtnClick);
+    };
+
+    var onCatalogFilterFirstActiveElementFocusCange = function () {
+      if (!document.activeElement.closest('.catalog__filter')) {
+        catalogFilterCloseBtn.focus();
+      }
+
+      document.removeEventListener('focusin', onCatalogFilterFirstActiveElementFocusCange);
+    };
+
+    var onCatalogFilterCloseBtnFocusCange = function () {
+      if (!document.activeElement.closest('.catalog__filter')) {
+        catalogFilterFirstActiveElement.focus();
+      }
+
+      document.removeEventListener('focusin', onCatalogFilterCloseBtnFocusCange);
+    };
+
+    var onCatalogFilterFirstActiveElementFocusout = function () {
+      document.addEventListener('focusin', onCatalogFilterFirstActiveElementFocusCange);
+    };
+
+    var onCatalogFilterCloseBtnFocusout = function () {
+      document.addEventListener('focusin', onCatalogFilterCloseBtnFocusCange);
     };
 
     catalogFilter.addEventListener('click', onCatalogFilterClick);

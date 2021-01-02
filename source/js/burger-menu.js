@@ -20,8 +20,8 @@
       navigation.classList.add('navigation--closed');
 
       header.removeEventListener('click', onNavigationClick);
-      document.removeEventListener('keydown', onOpenMenuEscPress);
       loginLink.removeEventListener('focusout', onLoginLinkFocusout);
+      document.removeEventListener('keydown', onOpenMenuEscPress);
     }
   };
 
@@ -35,8 +35,8 @@
       navigation.classList.remove('navigation--closed');
 
       header.addEventListener('click', onNavigationClick);
-      document.addEventListener('keydown', onOpenMenuEscPress);
       loginLink.addEventListener('focusout', onLoginLinkFocusout);
+      document.addEventListener('keydown', onOpenMenuEscPress);
     }
   };
 
