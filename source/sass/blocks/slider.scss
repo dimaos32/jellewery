@@ -79,7 +79,6 @@
   list-style: none;
 
   li {
-    display: flex;
     flex-shrink: 0;
     padding: 0 15px;
   }
@@ -155,6 +154,10 @@
 @media (max-width: $tablet-width) {
   .slider {
     margin-bottom: 60px;
+
+    &--product {
+      margin-bottom: 70px;
+    }
   }
 
   .slider__wrapper {
@@ -167,6 +170,10 @@
 
   .slider__catalog-link {
     margin-bottom: 45px;
+
+    .slider--product & {
+      margin-bottom: 45px;
+    }
   }
 
   .slider__control-arrow {
@@ -186,6 +193,10 @@
 @media (max-width: $mobile-width) {
   .slider {
     margin-bottom: 55px;
+
+    &--product {
+      margin-bottom: 65px;
+    }
   }
 
   .slider__wrapper {
