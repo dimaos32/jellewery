@@ -534,12 +534,54 @@
         </li>
       </ul>
 
-
-
-
     </section>
   </div>
 </footer>
+
+<div class="add-to-cart add-to-cart--modal-opened">
+  <div class="modal">
+    <h2>The item was added to your cart</h2>
+
+    <ul class="add-to-cart__list">
+      <li>
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/products/necklace-detail-mobile@1x.webp 1x, img/products/necklace-detail-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/products/necklace-detail-tablet@1x.webp 1x, img/products/necklace-detail-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/products/necklace-detail-desktop@1x.webp 1x, img/products/necklace-detail-desktop@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/products/necklace-detail-mobile@1x.jpg 1x, img/products/necklace-detail-mobile@2x.jpg 2x">
+          <source media="(max-width: 1023px)" srcset="img/products/necklace-detail-tablet@1x.jpg 1x, img/products/necklace-detail-tablet@2x.jpg 2x">
+          <!-- 1х: 470px; 2x: 940px -->
+          <img src="img/products/necklace-detail-desktop@1x.jpg" srcset="img/products/necklace-detail-desktop@2x.jpg 2x" alt="">
+        </picture>
+
+        <div>
+          <h3>Gold Necklace </h3>
+          <p>$ <output>115</output></p>
+        </div>
+
+        <div class="add-to-cart__quantity-controls">
+          <a class="add-to-cart__quantity add-to-cart__quantity--add" href="#"><span class="visually-hidden">Add</span></a>
+          <output>1</output>
+          <a class="add-to-cart__quantity add-to-cart__quantity--reduce" href="#"><span class="visually-hidden">Reduce</span></a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="add-to-cart__total">
+      <p class="add-to-cart__total-quantity">
+        You have <output>1</output> item in the cart
+      </p>
+      <p class="add-to-cart__total-price">
+        Cart subtotal: $ <output>115</output>
+      </p>
+    </div>
+
+    <div class="add-to-cart__btns">
+      <a href="catalog.html" class="btn btn--light">Continue shopping</a>
+      <a href="cart.html" class="btn">Checkout</a>
+    </div>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 

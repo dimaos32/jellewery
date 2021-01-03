@@ -31,6 +31,10 @@ $page--txt: $black-almost;
 $page--bg: $white;
 
 
+$add-to-cart--border: $white-almost;
+$add-to-cart--quantity-controls: $grey;
+$add-to-cart--overlay: rgba($black-almost, 0.25);
+
 $btn--txt: $white;
 $btn--bg: $site;
 $btn--bg-hover: $site-bright;
@@ -88,6 +92,8 @@ $header--menu-opened-hover: $site-bright;
 
 $logo--fill: $site;
 $logo--fill-hover: $site-bright;
+
+$modal--bg: $white;
 
 $navigation--link: $black-almost;
 $navigation--link-secondary: rgba($black-almost, 0.75);
