@@ -103,48 +103,30 @@
 
 <main>
 
-<section class="add-to-cart">
-  <h1 class="visually-hidden">Add to cart page<</h1>
+<section class="login">
+  <h1 class="visually-hidden">Login page<</h1>
 
-  <h2>The item was added to your cart</h2>
+  <h2>Log In</h2>
 
-  <ul class="add-to-cart__list">
-    <li>
-      <picture>
-        <source type="image/webp" media="(max-width: 767px)" srcset="img/products/necklace-detail-mobile@1x.webp 1x, img/products/necklace-detail-mobile@2x.webp 2x">
-        <source type="image/webp" media="(max-width: 1023px)" srcset="img/products/necklace-detail-tablet@1x.webp 1x, img/products/necklace-detail-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/products/necklace-detail-desktop@1x.webp 1x, img/products/necklace-detail-desktop@2x.webp 2x">
-        <source media="(max-width: 767px)" srcset="img/products/necklace-detail-mobile@1x.jpg 1x, img/products/necklace-detail-mobile@2x.jpg 2x">
-        <source media="(max-width: 1023px)" srcset="img/products/necklace-detail-tablet@1x.jpg 1x, img/products/necklace-detail-tablet@2x.jpg 2x">
-        <!-- 1х: 470px; 2x: 940px -->
-        <img src="img/products/necklace-detail-desktop@1x.jpg" srcset="img/products/necklace-detail-desktop@2x.jpg 2x" alt="">
-      </picture>
+  <form class="login__form" action="https://echo.htmlacademy.ru" method="POST">
+    <label for="email">
+      <span class="visually-hidden">E-mail</span>
+    </label>
+    <input type="email" name="email" id="email" placeholder="Your E-mail">
 
-      <div>
-        <h3>Gold Necklace </h3>
-        <p>$ <output>115</output></p>
-      </div>
+    <label for="password">
+      <span class="visually-hidden">Password</span>
+    </label>
+    <input type="password" name="password" id="password" placeholder="Password">
 
-      <div class="add-to-cart__quantity-controls">
-        <a class="add-to-cart__quantity add-to-cart__quantity--add" href="#"><span class="visually-hidden">Add</span></a>
-        <output>1</output>
-        <a class="add-to-cart__quantity add-to-cart__quantity--reduce" href="#"><span class="visually-hidden">Reduce</span></a>
-      </div>
-    </li>
-  </ul>
+    <a class="login__recovery-password" href="#">Forgot your password?</a>
 
-  <div class="add-to-cart__total">
-    <p class="add-to-cart__total-quantity">
-      You have <output>1</output> item in the cart
-    </p>
-    <p class="add-to-cart__total-price">
-      Cart subtotal: $ <output>115</output>
-    </p>
-  </div>
+    <button class="btn" type="submit">Log In</button>
+  </form>
 
-  <div class="add-to-cart__btns">
-    <a href="catalog.html" class="btn btn--light">Continue shopping</a>
-    <a href="cart.html" class="btn">Checkout</a>
+  <div class="login__links">
+    <a class="login__register" href="#">Don’t have an account?</a>
+    <a class="login__sign-up" href="#">Sign up</a>
   </div>
 </section>
 
