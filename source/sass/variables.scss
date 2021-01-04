@@ -3,6 +3,7 @@
 $black: #000000;
 
 $black-almost:#1d1613;
+$grey-dark: #797979;
 $grey: #9b9997;
 $grey-light: #e6e6e6;
 $white-dirty: #f0eae4;
@@ -94,6 +95,9 @@ $logo--fill: $site;
 $logo--fill-hover: $site-bright;
 
 $modal--bg: $white;
+$modal--close-btn: $black-almost;
+$modal--close-btn-hover: $site;
+$modal--shadow: rgba($grey-dark, 0.24);
 
 $navigation--link: $black-almost;
 $navigation--link-secondary: rgba($black-almost, 0.75);
