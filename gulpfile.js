@@ -38,6 +38,7 @@ gulp.task('javascript', function () {
     './source/js/faq.js',
     './source/js/slider.js',
     './source/js/catalog-filter.js',
+    './source/js/add-to-cart.js',
   ])
       .pipe(sourcemap.init())
       .pipe(concat('main.js'))

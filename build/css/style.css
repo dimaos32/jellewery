@@ -70,6 +70,7 @@ img {
   height: auto; }
 
 .add-to-cart {
+  z-index: 1;
   margin: 0 auto;
   padding: 45px 0 55px; }
   .add-to-cart--modal-closed {
@@ -1706,7 +1707,7 @@ img {
   .product__info-slide dd {
     font-weight: 400; }
 
-.product__info-btn {
+.product__add-to-cart-btn {
   margin-bottom: 18px; }
 
 .product__services {
