@@ -3,6 +3,7 @@
   margin: auto;
   padding: 45px 0 55px;
   background-color: $add-to-cart--bg;
+  box-shadow: 0 4px 32px $add-to-cart--shadow;
 
   h2 {
     margin: 0;
@@ -133,10 +134,12 @@
 
 @media (max-width: $mobile-width) {
   .add-to-cart {
-    padding: 35px 0 45px;
+    width: 270px;
+    padding: 35px 15px 45px;
+    box-shadow: none;
 
     h2 {
-      width: 230px;
+      width: 200px;
       margin: 0 auto 30px;
       padding: 0;
       font-size: 24px;
@@ -148,7 +151,7 @@
     padding-bottom: 30px;
 
     li {
-      width: 260px;
+      width: 100%;
     }
 
     img {
@@ -174,7 +177,7 @@
 
   .add-to-cart__total {
     flex-direction: column;
-    width: 260px;
+    width: 100%;
     margin-bottom: 10px;
     padding: 20px 0;
 
@@ -189,7 +192,7 @@
 
   .add-to-cart__btns {
     flex-direction: column;
-    width: 260px;
+    width: 100%;
     margin: 0 auto;
 
     a {

@@ -36,6 +36,7 @@ $add-to-cart--bg: $white;
 $add-to-cart--border: $white-almost;
 $add-to-cart--quantity-controls: $grey;
 $add-to-cart--overlay: rgba($black-almost, 0.25);
+$add-to-cart--shadow: rgba($grey-dark, 0.24);
 
 $btn--txt: $white;
 $btn--bg: $site;
@@ -93,6 +94,7 @@ $header--menu-opened: $white;
 $header--menu-opened-hover: $site-bright;
 
 $login--bg: $white-dirty;
+$login--overlay: $white;
 $login--form-border: $black-almost;
 $login--form-border-hover: $site;
 $login--link: $grey;
@@ -104,7 +106,6 @@ $logo--fill-hover: $site-bright;
 $modal--bg: $white;
 $modal--close-btn: $black-almost;
 $modal--close-btn-hover: $site;
-$modal--shadow: rgba($grey-dark, 0.24);
 
 $navigation--link: $black-almost;
 $navigation--link-secondary: rgba($black-almost, 0.75);

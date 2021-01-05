@@ -1,9 +1,7 @@
 .modal {
   position: relative;
   margin: auto;
-  padding: 45px 0 55px;
   background-color: $modal--bg;
-  box-shadow: 0 4px 32px $modal--shadow;
 
   &--closed {
     display: none;
@@ -16,7 +14,14 @@
     left: 0;
     right: 0;
     display: flex;
+  }
+
+  &--add-to-cart {
     background-color: $add-to-cart--overlay;
+  }
+
+  &--login {
+    background-color: $login--overlay;
   }
 }
 
@@ -60,12 +65,5 @@
   &:active::before,
   &:active::after {
     opacity: 0.6;
-  }
-}
-
-@media (max-width: $mobile-width) {
-  .modal {
-    width: 290px;
-    padding: 35px 0 45px;
   }
 }
