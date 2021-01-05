@@ -1,21 +1,8 @@
 .add-to-cart {
-  z-index: 1;
-  margin: 0 auto;
+  position: relative;
+  margin: auto;
   padding: 45px 0 55px;
-
-  &--modal-closed {
-    display: none;
-  }
-
-  &--modal-opened {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    background-color: $add-to-cart--overlay;
-  }
+  background-color: $add-to-cart--bg;
 
   h2 {
     margin: 0;

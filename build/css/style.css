@@ -70,21 +70,10 @@ img {
   height: auto; }
 
 .add-to-cart {
-  z-index: 1;
-  margin: 0 auto;
-  padding: 45px 0 55px; }
-  .add-to-cart--modal-closed {
-    display: none; }
-  .add-to-cart--modal-opened {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: rgba(29, 22, 19, 0.25); }
+  position: relative;
+  margin: auto;
+  padding: 45px 0 55px;
+  background-color: #ffffff; }
   .add-to-cart h2 {
     margin: 0;
     margin-bottom: 45px;
@@ -1314,8 +1303,9 @@ img {
     right: 15px; } }
 
 .login {
+  position: relative;
   width: 430px;
-  margin: 0 auto;
+  margin: auto;
   padding: 45px;
   padding-top: 160px;
   background: #f0eae4 url("../img/login-bg-desktop@x1.jpg") center top/430px 138px no-repeat; }
@@ -1434,12 +1424,23 @@ img {
 
 .modal {
   position: relative;
-  width: 500px;
   margin: auto;
   padding: 45px 0 55px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
           box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24); }
+  .modal--closed {
+    display: none; }
+  .modal--opened {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: rgba(29, 22, 19, 0.25); }
 
 .modal__close-btn {
   content: "";

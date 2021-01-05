@@ -1,10 +1,12 @@
 'use strict';
 
 (function () {
-  if (document.querySelector('.modal--add-to-cart')) {
-    var overlay = document.querySelector('.modal--add-to-cart');
-    var closeBtn = overlay.querySelector('.modal__close-btn');
-    var modalOpenBtn = document.querySelector('.product__add-to-cart-btn');
+  if (document.querySelector('.modal--login')) {
+    var overlay = document.querySelector('.modal--login');
+    var closeBtn = document.querySelector('.modal__close-btn');
+    var modalOpenBtnHeaderLink = document.querySelector('.header__login-link');
+    var modalOpenBtnHeaderBtn = document.querySelector('.header__login-btn');
+    var modalOpenBtnNav = document.querySelector('.navigation__link--login');
 
     var onModalOpenBtnClick = function (evt) {
       evt.preventDefault();
@@ -46,6 +48,8 @@
       }
     };
 
-    modalOpenBtn.addEventListener('click', onModalOpenBtnClick);
+    modalOpenBtnHeaderLink.addEventListener('click', onModalOpenBtnClick);
+    modalOpenBtnHeaderBtn.addEventListener('click', onModalOpenBtnClick);
+    modalOpenBtnNav.addEventListener('click', onModalOpenBtnClick);
   }
 })();

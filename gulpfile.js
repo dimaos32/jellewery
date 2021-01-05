@@ -34,11 +34,13 @@ gulp.task('css', function () {
 
 gulp.task('javascript', function () {
   return gulp.src([
+    './source/js/utils.js',
     './source/js/burger-menu.js',
     './source/js/faq.js',
     './source/js/slider.js',
     './source/js/catalog-filter.js',
     './source/js/add-to-cart.js',
+    './source/js/login.js',
   ])
       .pipe(sourcemap.init())
       .pipe(concat('main.js'))

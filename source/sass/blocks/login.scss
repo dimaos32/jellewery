@@ -1,6 +1,7 @@
 .login {
+  position: relative;
   width: 430px;
-  margin: 0 auto;
+  margin: auto;
   padding: 45px;
   padding-top: 160px;
   background: $login--bg url("../img/login-bg-desktop@x1.jpg") center top /430px 138px no-repeat;
