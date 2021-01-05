@@ -449,7 +449,8 @@ img {
     left: 0;
     width: 100%;
     padding: 10px 25px;
-    outline: none; }
+    outline: none;
+    cursor: pointer; }
     .catalog__filter-fildset legend::before, .catalog__filter-fildset legend::after {
       content: "";
       position: absolute;
@@ -465,7 +466,7 @@ img {
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
     .catalog__filter-fildset legend:hover, .catalog__filter-fildset legend:focus {
-      color: #564034; }
+      color: #a87b62; }
     .catalog__filter-fildset legend:active {
       opacity: 0.6; }
   .catalog__filter-fildset ul {
@@ -1515,7 +1516,8 @@ img {
     background-image: url("../img/login-bg-mobile@x2.jpg"); } }
 
 .logo {
-  display: block; }
+  display: block;
+  outline: none; }
   .logo svg {
     display: block;
     width: 66px;

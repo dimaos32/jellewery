@@ -28,6 +28,7 @@
     width: 100%;
     padding: 10px 25px;
     outline: none;
+    cursor: pointer;
 
     &::before,
     &::after {
@@ -50,7 +51,7 @@
 
     &:hover,
     &:focus {
-      color: $catalog--filter-input-hover;
+      color: $catalog--filter-input;
     }
 
     &:active {
