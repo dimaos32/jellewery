@@ -1,6 +1,7 @@
 .page {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+  width: 100%;
   min-height: 100vh;
   font-family: $poppins;
   font-style: normal;
@@ -9,4 +10,9 @@
   line-height: 1.3;
   color: $page--txt;
   background-color: $page--bg;
+
+  &--block-scroll {
+    position: fixed;
+    overflow-y: scroll;
+  }
 }
