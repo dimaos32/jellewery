@@ -42,6 +42,10 @@
       height: 435px;
     }
   }
+
+  p {
+    display: none;
+  }
 }
 
 .product__info {
@@ -80,6 +84,7 @@
   display: block;
   padding: 10px 18px;
   color: $product--tab-txt;
+  outline: none;
 
   &--current {
     color: $product--tab-txt-current;
@@ -221,6 +226,8 @@
   }
 
   .product__photo {
+    position: relative;
+
     img {
       display: none;
     }
@@ -234,6 +241,17 @@
         min-height: 260px;
         height: auto;
       }
+    }
+
+    p {
+      display: block;
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.3;
     }
   }
 

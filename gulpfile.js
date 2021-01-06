@@ -41,6 +41,7 @@ gulp.task('javascript', function () {
     './source/js/catalog-filter.js',
     './source/js/add-to-cart.js',
     './source/js/login.js',
+    './source/js/product.js',
   ])
       .pipe(sourcemap.init())
       .pipe(concat('main.js'))
