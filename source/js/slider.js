@@ -200,8 +200,8 @@
 
     window.addEventListener('resize', onWindowResize);
 
-    previewSlideBtn.addEventListener('click', onPreviewSlideBtnClick);
-    nextSlideBtn.addEventListener('click', onNextSlideBtnClick);
+    previewSlideBtn.addEventListener('click', onPreviewSlideBtnClick, {passive: true});
+    nextSlideBtn.addEventListener('click', onNextSlideBtnClick, {passive: true});
 
     slider.addEventListener('touchstart', onSliderTouchStart);
     slider.addEventListener('touchmove', onSliderTouchMove);

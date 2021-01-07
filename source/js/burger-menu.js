@@ -1,7 +1,8 @@
 'use strict';
 
 (function () {
-  var header = document.querySelector('.header');
+  var page = document.querySelector('.page');
+  var header = page.querySelector('.header');
   var menuToggle = header.querySelector('.header__menu-toggle');
   var navigation = header.querySelector('.navigation');
   var loginLink = navigation.querySelector('.navigation__link--login');
@@ -12,6 +13,7 @@
 
   var closeMenu = function () {
     if (header.classList.contains('header--menu-opened')) {
+      page.classList.remove('page--no-scroll');
       header.classList.remove('header--menu-opened');
       header.classList.add('header--menu-closed');
       menuToggle.classList.remove('header__menu-toggle--opened');
@@ -27,6 +29,7 @@
 
   var openMenu = function () {
     if (header.classList.contains('header--menu-closed')) {
+      page.classList.add('page--no-scroll');
       header.classList.add('header--menu-opened');
       header.classList.remove('header--menu-closed');
       menuToggle.classList.add('header__menu-toggle--opened');

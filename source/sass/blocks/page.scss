@@ -11,6 +11,10 @@
   color: $page--txt;
   background-color: $page--bg;
 
+  &--no-scroll {
+    overflow: hidden;
+  }
+
   &--block-scroll {
     position: fixed;
     overflow-y: scroll;
