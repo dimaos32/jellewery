@@ -30,7 +30,7 @@
   };
 
   window.utils = {
-    openModal: openModal,
-    closeModal: closeModal,
+    'openModal': openModal,
+    'closeModal': closeModal,
   };
 })();
