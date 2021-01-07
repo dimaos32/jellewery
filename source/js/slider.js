@@ -203,8 +203,8 @@
     previewSlideBtn.addEventListener('click', onPreviewSlideBtnClick, {passive: true});
     nextSlideBtn.addEventListener('click', onNextSlideBtnClick, {passive: true});
 
-    slider.addEventListener('touchstart', onSliderTouchStart);
-    slider.addEventListener('touchmove', onSliderTouchMove);
+    slider.addEventListener('touchstart', onSliderTouchStart, {passive: true});
+    slider.addEventListener('touchmove', onSliderTouchMove, {passive: true});
 
     slider.addEventListener('focusin', onSliderFocus);
 
