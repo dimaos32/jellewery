@@ -49,15 +49,15 @@
 
 .gallery__list {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: 230fr 400fr 232fr 218fr;
   gap: 30px;
-  margin: -15px 0;
 }
 
 .gallery__wrapper {
   --margin-shift: 14px;
   display: flex;
   flex-direction: column;
+  margin: -15px 0;
 
   &:last-of-type {
     margin-left: calc((0 - 1) * var(--margin-shift));
@@ -68,8 +68,7 @@
     object-fit: cover;
     width: 100%;
     max-width: 100%;
-    height: max-content;
-    margin: 15px 0;
+    height: 100%;
   }
 
   .gallery__img-5 {
@@ -81,6 +80,11 @@
     width: calc(100% - var(--margin-shift));
     margin-left: var(--margin-shift);
   }
+}
+
+.galerry__inner {
+  flex-grow: 1;
+  margin: 15px 0;
 }
 
 @media (max-width: $tablet-width) {
@@ -97,16 +101,17 @@
   }
 
   .gallery__list {
+    grid-template-columns: 133fr 231fr 134fr 126fr;
     gap: 18px;
-    margin: -15px 0;
   }
 
   .gallery__wrapper {
     --margin-shift: 8px;
+    margin: -9px 0;
+  }
 
-    img {
-      margin: 9px 0;
-    }
+  .galerry__inner {
+    margin: 9px 0;
   }
 }
 
@@ -120,50 +125,47 @@
   }
 
   .gallery__list {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 130fr 145fr;
     gap: 0 15px;
-    margin: -7px 0 -8px;
   }
 
   .gallery__wrapper {
     --margin-shift: 6px;
+    margin: -7px 0 -8px;
 
     &:last-of-type {
       display: none;
     }
 
+    &:nth-of-type(2) {
+      margin-bottom: var(--margin-shift);
+    }
+
     &:nth-last-of-type(2) {
       grid-column: 1 / -1;
       flex-direction: row-reverse;
-      margin-left: -7px;
-      margin-right: -8px;
       margin-top: calc((0 - 1) * var(--margin-shift));
 
       picture {
         flex-grow: 1;
       }
-
-      img {
-        width: calc(100% - 15px);
-        margin-left: 7px;
-        margin-right: 8px;
-      }
-    }
-
-    img {
-      margin: 7px 0 8px;
     }
 
     .gallery__img-5 {
       width: 100%;
       margin-right: 0;
-      // width: calc(100% - var(--margin-shift));
+      height: auto;
       margin-top: calc(7px + var(--margin-shift));
     }
+  }
 
-    .gallery__img-6 {
-      width: 100%;
-      margin-left: 0;
+  .galerry__inner {
+    &--img-4 {
+      margin-left: 7px;
+    }
+
+    &--img-5 {
+      margin-right: 8px;
     }
   }
 }
