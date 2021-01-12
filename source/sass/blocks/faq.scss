@@ -107,6 +107,13 @@
       transform-origin: (center top);
     }
   }
+
+  &--hide-icon {
+    a::before,
+    a::after {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: $tablet-width) {

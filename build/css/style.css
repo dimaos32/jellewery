@@ -930,6 +930,9 @@ img {
   .faq__question--opened a::after {
     -webkit-transform-origin: center top;
             transform-origin: center top; }
+  .faq__question--hide-icon a::before,
+  .faq__question--hide-icon a::after {
+    display: none; }
 
 @media (max-width: 1023px) {
   .faq {
@@ -1569,7 +1572,8 @@ img {
   height: 34px;
   background-color: transparent;
   border: none;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
   .modal__close-btn::before, .modal__close-btn::after {
     content: "";
     position: absolute;
