@@ -1324,6 +1324,7 @@ img {
     .header--menu-closed {
       position: static; }
     .header--menu-opened {
+      overflow-y: scroll;
       position: fixed;
       width: 100%;
       height: 100vh;
@@ -1885,13 +1886,15 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -18px 12px;
+  margin: 0 -10px 12px;
   padding: 0;
   list-style: none; }
+  .product__info-tabs li:not(:last-of-type) {
+    margin-right: 15px; }
 
 .product__info-tab {
   display: block;
-  padding: 10px 18px;
+  padding: 10px;
   color: #9b9997;
   outline: none; }
   .product__info-tab--current {
