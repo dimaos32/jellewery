@@ -151,6 +151,7 @@
     background-color: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
 
     &--closed::before,
     &--opened::before,
@@ -211,6 +212,8 @@
     top: 50%;
     right: 45px;
     transform: translateY(-50%);
+    margin-right: -10px;
+    padding: 10px;
     outline: none;
 
     svg {
