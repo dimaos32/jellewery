@@ -26,9 +26,18 @@
     top: 15px;
     left: 0;
     width: 100%;
+  }
+
+  button {
+    position: relative;
+    width: 100%;
     padding: 10px 25px;
+    font: inherit;
+    text-align-last: left;
+    color: inherit;
+    background-color: transparent;
+    border: none;
     outline: none;
-    cursor: pointer;
 
     &::before,
     &::after {
@@ -94,8 +103,8 @@
       display: none;
     }
 
-    & legend::before,
-    & legend::after {
+    & button::before,
+    & button::after {
       transform-origin: (center bottom);
     }
   }
@@ -106,9 +115,16 @@
       display: block;
     }
 
-    & legend::before,
-    & legend::after {
+    & button::before,
+    & button::after {
       transform-origin: (center top);
+    }
+  }
+
+  &--hide-icon {
+    & button::before,
+    & button::after {
+      display: none;
     }
   }
 
@@ -388,6 +404,9 @@
 
     legend {
       top: 30px;
+    }
+
+    button {
       padding: 10px 40px;
       font-size: 18px;
 
@@ -517,6 +536,9 @@
 
     legend {
       top: 20px;
+    }
+
+    button {
       padding: 10px 20px;
       font-size: 18px;
 

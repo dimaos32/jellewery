@@ -406,7 +406,8 @@ img {
   text-align: center;
   background-color: #a87b62;
   border: 1px solid #a87b62;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
   .btn:hover, .btn:focus {
     background-color: #564034;
     border-color: #564034; }
@@ -447,11 +448,19 @@ img {
     position: absolute;
     top: 15px;
     left: 0;
+    width: 100%; }
+  .catalog__filter-fildset button {
+    position: relative;
     width: 100%;
     padding: 10px 25px;
-    outline: none;
-    cursor: pointer; }
-    .catalog__filter-fildset legend::before, .catalog__filter-fildset legend::after {
+    font: inherit;
+    -moz-text-align-last: left;
+         text-align-last: left;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none; }
+    .catalog__filter-fildset button::before, .catalog__filter-fildset button::after {
       content: "";
       position: absolute;
       top: 14px;
@@ -459,15 +468,15 @@ img {
       width: 1px;
       height: 11px;
       background-color: #a87b62; }
-    .catalog__filter-fildset legend::before {
+    .catalog__filter-fildset button::before {
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg); }
-    .catalog__filter-fildset legend::after {
+    .catalog__filter-fildset button::after {
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
-    .catalog__filter-fildset legend:hover, .catalog__filter-fildset legend:focus {
+    .catalog__filter-fildset button:hover, .catalog__filter-fildset button:focus {
       color: #a87b62; }
-    .catalog__filter-fildset legend:active {
+    .catalog__filter-fildset button:active {
       opacity: 0.6; }
   .catalog__filter-fildset ul {
     margin: 17px 0 10px;
@@ -493,17 +502,20 @@ img {
   .catalog__filter-fildset--closed ul,
   .catalog__filter-fildset--closed .catalog__range-filter {
     display: none; }
-  .catalog__filter-fildset--closed legend::before,
-  .catalog__filter-fildset--closed legend::after {
+  .catalog__filter-fildset--closed button::before,
+  .catalog__filter-fildset--closed button::after {
     -webkit-transform-origin: center bottom;
             transform-origin: center bottom; }
   .catalog__filter-fildset--opened ul,
   .catalog__filter-fildset--opened .catalog__range-filter {
     display: block; }
-  .catalog__filter-fildset--opened legend::before,
-  .catalog__filter-fildset--opened legend::after {
+  .catalog__filter-fildset--opened button::before,
+  .catalog__filter-fildset--opened button::after {
     -webkit-transform-origin: center top;
             transform-origin: center top; }
+  .catalog__filter-fildset--hide-icon button::before,
+  .catalog__filter-fildset--hide-icon button::after {
+    display: none; }
   .catalog__filter-fildset input:checked + label::before {
     background-color: #a87b62; }
   .catalog__filter-fildset input:hover + label,
@@ -704,10 +716,11 @@ img {
     border: none;
     border-bottom: 1px solid #a87b62; }
     .catalog__filter-fildset legend {
-      top: 30px;
+      top: 30px; }
+    .catalog__filter-fildset button {
       padding: 10px 40px;
       font-size: 18px; }
-      .catalog__filter-fildset legend::before, .catalog__filter-fildset legend::after {
+      .catalog__filter-fildset button::before, .catalog__filter-fildset button::after {
         top: 10px;
         right: 52px;
         width: 1px;
@@ -791,10 +804,11 @@ img {
     border: none;
     border-bottom: 1px solid #a87b62; }
     .catalog__filter-fildset legend {
-      top: 20px;
+      top: 20px; }
+    .catalog__filter-fildset button {
       padding: 10px 20px;
       font-size: 18px; }
-      .catalog__filter-fildset legend::before, .catalog__filter-fildset legend::after {
+      .catalog__filter-fildset button::before, .catalog__filter-fildset button::after {
         right: 31px;
         width: 1px;
         height: 14px; }

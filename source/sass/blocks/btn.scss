@@ -8,6 +8,7 @@
   background-color: $btn--bg;
   border: 1px solid $btn--border;
   outline: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
