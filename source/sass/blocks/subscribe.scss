@@ -55,24 +55,26 @@
     border: none;
     outline: none;
     cursor: pointer;
+  }
+}
+
+.subscribe__submit-btn {
+  svg {
+    margin-left: 7px;
+    stroke: $subscribe-txt;
+  }
+
+  &:hover,
+  &:focus {
+    color: $subscribe-txt-hover;
 
     svg {
-      margin-left: 7px;
-      stroke: $subscribe-txt;
+      stroke: $subscribe-txt-hover;
     }
+  }
 
-    &:hover,
-    &:focus {
-      color: $subscribe-txt-hover;
-
-      svg {
-        stroke: $subscribe-txt-hover;
-      }
-    }
-
-    &:active {
-      opacity: 0.6;
-    }
+  &:active {
+    opacity: 0.6;
   }
 }
 

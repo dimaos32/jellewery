@@ -10,11 +10,11 @@
     line-height: 1.3;
     text-align: center;
     letter-spacing: 0.03em;
+  }
 
-    span {
-      margin-right: -2px;
-      font-size: 42px;
-    }
+  span {
+    margin-right: -2px;
+    font-size: 42px;
   }
 }
 
@@ -161,10 +161,12 @@
 
   .galerry__inner {
     &--img-4 {
+      width: percentage(145 / 290);
       margin-left: 7px;
     }
 
     &--img-5 {
+      width: percentage(130 / 290);
       margin-right: 8px;
     }
   }

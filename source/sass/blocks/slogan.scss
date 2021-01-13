@@ -2,28 +2,6 @@
   margin-bottom: 120px;
   background: $slogan--img-bg url("../img/main-intro-desktop@1x.jpg") center / cover no-repeat;
 
-  &--catalog {
-    margin-bottom: 80px;
-    background-image: url("../img/catalog-intro-desktop@1x.jpg");
-  }
-}
-
-.slogan__wrapper {
-  display: flex;
-  min-height: 463px;
-  background-color: $slogan--bg;
-  box-shadow: 0 4px 4px $slogan--shadow;
-
-  .slogan--catalog & {
-    min-height: 261px;
-    box-shadow: none;
-  }
-}
-
-.slogan__inner {
-  width: 550px;
-  margin: auto;
-
   h2 {
     margin: 0;
     margin-bottom: -5px;
@@ -48,7 +26,10 @@
     color: $slogan--txt;
   }
 
-  .slogan--catalog & {
+  &--catalog {
+    margin-bottom: 80px;
+    background-image: url("../img/catalog-intro-desktop@1x.jpg");
+
     h2 {
       margin-bottom: 0;
       font-size: 34px;
@@ -59,6 +40,23 @@
       font-size: 22px;
     }
   }
+}
+
+.slogan__wrapper {
+  display: flex;
+  min-height: 463px;
+  background-color: $slogan--bg;
+  box-shadow: 0 4px 4px $slogan--shadow;
+
+  .slogan--catalog & {
+    min-height: 261px;
+    box-shadow: none;
+  }
+}
+
+.slogan__inner {
+  width: 550px;
+  margin: auto;
 }
 
 @media (min-resolution: 2dppx) {
