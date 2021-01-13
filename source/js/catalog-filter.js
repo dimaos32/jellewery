@@ -12,7 +12,7 @@
     var onCatalogFilterClick = function (evt) {
       var target = evt.target.closest('.catalog__filter-fildset');
 
-      if (evt.target.closest('.catalog__filter-fildset button')) {
+      if (evt.target.closest('.catalog__filter-group-btn')) {
         evt.preventDefault();
 
         target.classList.toggle('catalog__filter-fildset--opened');

@@ -8,7 +8,7 @@
     var onQuestionClick = function (evt) {
       var target = evt.target.closest('.faq__question');
 
-      if (evt.target.closest('.faq__questions a')) {
+      if (evt.target.closest('.faq__questions button')) {
         evt.preventDefault();
 
         target.classList.toggle('faq__question--opened');

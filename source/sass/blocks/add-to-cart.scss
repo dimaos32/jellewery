@@ -75,6 +75,9 @@
     transform: translateX(-50%);
     width: 34px;
     height: 34px;
+    background-color: transparent;
+    border: none;
+    outline: none;
 
     &--add {
       top: -10px;

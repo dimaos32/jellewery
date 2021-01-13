@@ -28,46 +28,6 @@
     width: 100%;
   }
 
-  button {
-    position: relative;
-    width: 100%;
-    padding: 10px 25px;
-    font: inherit;
-    text-align-last: left;
-    color: inherit;
-    background-color: transparent;
-    border: none;
-    outline: none;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 14px;
-      right: 29px;
-      width: 1px;
-      height: 11px;
-      background-color: $faq--question-link;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-
-    &:hover,
-    &:focus {
-      color: $catalog--filter-input;
-    }
-
-    &:active {
-      opacity: 0.6;
-    }
-  }
-
   ul {
     margin: 17px 0 10px;
     padding: 0;
@@ -171,6 +131,46 @@
   }
 }
 
+.catalog__filter-group-btn {
+  position: relative;
+  width: 100%;
+  padding: 10px 25px;
+  font: inherit;
+  text-align-last: left;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 29px;
+    width: 1px;
+    height: 11px;
+    background-color: $faq--question-link;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    color: $catalog--filter-input;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .catalog__range-filter {
   margin-top: 15px;
 }
@@ -202,8 +202,8 @@
   height: 15px;
   background-color: $catalog--filter-range-toggle;
   border-radius: 50%;
+  border: none;
   outline: none;
-  cursor: pointer;
 
   &--min {
     left: -7px;

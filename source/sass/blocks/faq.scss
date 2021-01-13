@@ -25,11 +25,16 @@
   padding: 28px 40px;
   border: 1px solid $faq--question-border;
 
-  a {
+  button {
     display: block;
     position: relative;
+    width: 100%;
     padding: 15px 0;
+    font: inherit;
     color: $page--txt;
+    text-align: left;
+    background-color: transparent;
+    border: none;
     outline: none;
 
     &:hover,
@@ -89,8 +94,8 @@
       margin-bottom: 0;
     }
 
-    a::before,
-    a::after {
+    button::before,
+    button::after {
       transform-origin: (center bottom);
     }
   }
@@ -102,15 +107,15 @@
       margin-bottom: 15px;
     }
 
-    a::before,
-    a::after {
+    button::before,
+    button::after {
       transform-origin: (center top);
     }
   }
 
   &--hide-icon {
-    a::before,
-    a::after {
+    button::before,
+    button::after {
       display: none;
     }
   }
@@ -128,7 +133,7 @@
   .faq__question {
     padding: 28px 50px;
 
-    a {
+    button {
       &::before,
       &::after {
         right: 10px;
@@ -161,7 +166,7 @@
   .faq__question {
     padding: 5px 25px;
 
-    a {
+    button {
       padding: 10px 0;
 
       &::before,

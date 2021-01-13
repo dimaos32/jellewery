@@ -123,13 +123,13 @@
 
 <section class="catalog">
   <div class="catalog__container container">
-    <a class="btn btn--catalog-filter catalog__filter-open-btn" href="#">Filter</a>
+    <button class="btn btn--catalog-filter catalog__filter-open-btn" href="#">Filter</button>
 
     <div class="catalog__filter-overlay catalog__filter-overlay--closed">
       <form class="catalog__filter" action="https://echo.htmlacademy.ru" method="GET">
         <fieldset class="catalog__filter-fildset catalog__filter-fildset--opened catalog__filter-fildset--hide-icon">
           <legend>
-            <button type="button">Product</button>
+            <button class="catalog__filter-group-btn" type="button">Product</button>
           </legend>
           <ul>
             <li>
@@ -153,7 +153,7 @@
 
         <fieldset class="catalog__filter-fildset catalog__filter-fildset--opened catalog__filter-fildset--hide-icon">
           <legend>
-            <button type="button">Material</button>
+            <button class="catalog__filter-group-btn" type="button">Material</button>
             </legend>
           <ul>
             <li>
@@ -169,7 +169,7 @@
 
         <fieldset class="catalog__filter-fildset catalog__filter-fildset--opened catalog__filter-fildset--hide-icon">
           <legend>
-            <button type="button">Collection</button>
+            <button class="catalog__filter-group-btn" type="button">Collection</button>
           </legend>
           <ul>
             <li>
@@ -185,7 +185,7 @@
 
         <fieldset class="catalog__filter-fildset catalog__filter-fildset--opened catalog__filter-fildset--hide-icon catalog__price-filter">
           <legend>
-            <button type="button">Price</button>
+            <button class="catalog__filter-group-btn" type="button">Price</button>
           </legend>
           <div class="catalog__range-filter">
             <div class="catalog__range-controls">
@@ -194,8 +194,8 @@
                   width: 60%;
                   margin-left: 20%;
                 ">
-                  <div class="catalog__range-toggle catalog__range-toggle--min" tabindex="0" aria-label="Установить минимальную цену"></div>
-                  <div class="catalog__range-toggle catalog__range-toggle--max" tabindex="0" aria-label="Установить максимальную цену"></div>
+                  <button class="catalog__range-toggle catalog__range-toggle--min" type="button" aria-label="Установить минимальную цену"></button>
+                  <button class="catalog__range-toggle catalog__range-toggle--max" type="button" aria-label="Установить максимальную цену"></button>
                 </div>
               </div>
             </div>
