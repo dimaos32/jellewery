@@ -1,10 +1,6 @@
 .header__top {
   padding: 30px 0;
   border-bottom: 1px solid $header--border;
-
-  .header--main-page & {
-    padding-bottom: 18px;
-  }
 }
 
 .header__top__container {
