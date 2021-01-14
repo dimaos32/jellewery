@@ -1,5 +1,10 @@
 .navigation__search {
   display: none;
+
+  input {
+    border-radius: 0;
+    appearance: none;
+  }
 }
 
 .navigation__list {
@@ -124,14 +129,6 @@
       display: block;
       margin-left: -15px;
       margin-bottom: 25px;
-    }
-  }
-
-  .header__logo {
-    .header--menu-opened & {
-      svg {
-        fill: $header--menu-opened;
-      }
     }
   }
 

@@ -194,20 +194,13 @@
                   width: 60%;
                   margin-left: 20%;
                 ">
-                  <button class="catalog__range-toggle catalog__range-toggle--min" type="button" aria-label="Установить минимальную цену"></button>
-                  <button class="catalog__range-toggle catalog__range-toggle--max" type="button" aria-label="Установить максимальную цену"></button>
+                  <button class="catalog__range-toggle catalog__range-toggle--min" type="button" aria-label="Установить минимальную цену">
+                    <div>$ <output>50</output></div>
+                  </button>
+                  <button class="catalog__range-toggle catalog__range-toggle--max" type="button" aria-label="Установить максимальную цену">
+                    <div>$ <output>200</output></div>
+                  </button>
                 </div>
-              </div>
-            </div>
-            <div class="catalog__price-controls">
-              <div>
-                <span>$</span>
-                <input type="text" name="catalog__min-price" value="50" pattern="[0-9]{1,3}">
-              </div>
-
-              <div>
-                <span>$</span>
-                <input type="text" name="catalog__max-price" value="200" pattern="[0-9]{1,3}">
               </div>
             </div>
           </div>

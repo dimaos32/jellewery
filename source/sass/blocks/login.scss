@@ -46,6 +46,8 @@
     border: none;
     border-bottom: 1px solid $login--form-border;
     outline: none;
+    border-radius: 0;
+    appearance: none;
 
     &:last-of-type {
       margin-bottom: 0;

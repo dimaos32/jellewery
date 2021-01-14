@@ -21,6 +21,16 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .header__logo {
+    .header--menu-opened & {
+      svg {
+        fill: $header--menu-opened;
+      }
+    }
+  }
+}
+
 @media (max-width: $mobile-width) {
   .logo {
     svg {

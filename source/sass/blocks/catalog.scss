@@ -11,6 +11,11 @@
     padding-left: 25px;
     padding-right: 25px;
   }
+
+  input {
+    border-radius: 0;
+    appearance: none;
+  }
 }
 
 .catalog__filter-fildset {
@@ -176,7 +181,7 @@
 }
 
 .catalog__range-controls {
-  margin-bottom: 5px;
+  margin-bottom: 25px;
   padding-top: 7px;
   padding-bottom: 7px;
 }
@@ -200,6 +205,9 @@
   top: -7px;
   width: 15px;
   height: 15px;
+  padding: 0;
+  font: inherit;
+  color: inherit;
   background-color: $catalog--filter-range-toggle;
   border-radius: 50%;
   border: none;
@@ -221,35 +229,14 @@
   &:active {
     opacity: 0.6;
   }
-}
-
-.catalog__price-controls {
-  display: flex;
-  justify-content: space-around;
 
   div {
-    font-size: 0;
-  }
-
-  span {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    width: max-content;
     font-size: 14px;
-  }
-
-  input {
-    width: 40px;
-    font: inherit;
-    font-size: 14px;
-    border: none;
-    outline: none;
-
-    &:hover,
-    &:focus {
-      color: $catalog--filter-input-hover;
-    }
-
-    &:active {
-      opacity: 0.6;
-    }
   }
 }
 
@@ -407,20 +394,6 @@
       top: 30px;
     }
 
-    button {
-      padding: 10px 40px;
-      font-size: 18px;
-
-      &::before,
-      &::after {
-        top: 10px;
-        right: 52px;
-        width: 1px;
-        height: 17px;
-        background-color: $faq--question-link;
-      }
-    }
-
     ul {
       margin-top: 40px;
     }
@@ -442,6 +415,20 @@
         left: 10px;
         width: 18px;
         height: 18px;
+      }
+    }
+
+    .catalog__filter-group-btn {
+      padding: 10px 40px;
+      font-size: 18px;
+
+      &::before,
+      &::after {
+        top: 10px;
+        right: 52px;
+        width: 1px;
+        height: 17px;
+        background-color: $faq--question-link;
       }
     }
   }
@@ -539,18 +526,6 @@
       top: 20px;
     }
 
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-
-      &::before,
-      &::after {
-        right: 31px;
-        width: 1px;
-        height: 14px;
-      }
-    }
-
     ul {
       margin-top: 25px;
     }
@@ -570,6 +545,18 @@
         left: -10px;
         width: 18px;
         height: 18px;
+      }
+    }
+
+    .catalog__filter-group-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+
+      &::before,
+      &::after {
+        right: 31px;
+        width: 1px;
+        height: 14px;
       }
     }
   }
