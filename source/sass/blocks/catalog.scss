@@ -251,7 +251,7 @@
 
 .catalog__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 270px);
+  grid-template-columns: repeat(3, minmax(200px, 270px));
   gap: 37px 30px;
   margin: 0;
   padding: 0;
