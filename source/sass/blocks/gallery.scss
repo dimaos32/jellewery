@@ -82,7 +82,7 @@
   }
 }
 
-.gallery__inner   {
+.gallery__inner {
   flex-grow: 1;
   margin: 15px 0;
 }
@@ -110,7 +110,7 @@
     margin: -9px 0;
   }
 
-  .gallery__inner   {
+  .gallery__inner {
     margin: 9px 0;
   }
 }
@@ -159,7 +159,7 @@
     }
   }
 
-  .gallery__inner   {
+  .gallery__inner {
     &--img-4 {
       width: percentage(145 / 290);
       margin-left: 7px;
