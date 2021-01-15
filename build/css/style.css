@@ -996,8 +996,6 @@ img {
 @media (max-width: 1023px) {
   .faq {
     margin-bottom: 65px; }
-    .faq h2 {
-      margin-bottom: 30px; }
   .faq__question {
     padding: 28px 50px; }
     .faq__question button::before, .faq__question button::after {
@@ -1007,15 +1005,18 @@ img {
       margin-left: 0;
       min-width: 530px; }
     .faq__question--opened p {
-      margin-top: 10px; }
+      margin-top: 10px;
+      margin-bottom: 18px; }
   .faq__question-header {
     margin-left: 0; } }
 
 @media (max-width: 767px) {
   .faq {
     margin-bottom: 50px; }
+    .faq h2 {
+      margin-bottom: 30px; }
   .faq__question {
-    padding: 5px 25px; }
+    padding: 6px 25px; }
     .faq__question button {
       padding: 10px 0; }
       .faq__question button::before, .faq__question button::after {
@@ -1023,7 +1024,7 @@ img {
         height: 14px; }
     .faq__question p {
       margin-top: 5px;
-      margin-right: 35px;
+      margin-right: 30px;
       min-width: auto;
       font-size: 14px;
       line-height: 1.4; }

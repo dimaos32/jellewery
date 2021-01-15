@@ -125,10 +125,6 @@
 @media (max-width: $tablet-width) {
   .faq {
     margin-bottom: 65px;
-
-    h2 {
-      margin-bottom: 30px;
-    }
   }
 
   .faq__question {
@@ -150,6 +146,7 @@
     &--opened {
       p {
         margin-top: 10px;
+        margin-bottom: 18px;
       }
     }
   }
@@ -162,10 +159,14 @@
 @media (max-width: $mobile-width) {
   .faq {
     margin-bottom: 50px;
+
+    h2 {
+      margin-bottom: 30px;
+    }
   }
 
   .faq__question {
-    padding: 5px 25px;
+    padding: 6px 25px;
 
     button {
       padding: 10px 0;
@@ -179,7 +180,7 @@
 
     p {
       margin-top: 5px;
-      margin-right: 35px;
+      margin-right: 30px;
       min-width: auto;
       font-size: 14px;
       line-height: 1.4;
