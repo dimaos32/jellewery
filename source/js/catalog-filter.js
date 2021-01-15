@@ -87,6 +87,9 @@
       document.addEventListener('focusin', onCatalogFilterCloseBtnFocusCange);
     };
 
+    catalogFilterOpenBtn.classList.remove('catalog__filter-open-btn--no-js');
+    catalogFilter.classList.remove('catalog__filter-overlay--no-js');
+
     catalogFilterFieldsets.forEach(function (catalogFilterFieldset) {
       catalogFilterFieldset.classList.remove('catalog__filter-fildset--opened', 'catalog__filter-fildset--hide-icon');
       catalogFilterFieldset.classList.add('catalog__filter-fildset--closed');

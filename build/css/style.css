@@ -696,8 +696,9 @@ img {
 @media (max-width: 1023px) {
   .catalog__filter-open-btn {
     margin-bottom: 50px; }
+    .catalog__filter-open-btn--no-js {
+      display: none; }
   .catalog__filter-overlay {
-    position: relative;
     z-index: 1; }
     .catalog__filter-overlay--closed {
       display: none; }
@@ -709,6 +710,9 @@ img {
       left: 0;
       right: 0;
       background-color: #ffffff; }
+    .catalog__filter-overlay--no-js {
+      position: relative;
+      display: block; }
   .catalog__filter {
     width: 440px;
     max-height: calc(100vh - 54px);
@@ -721,11 +725,24 @@ img {
     .catalog__filter .catalog__price-filter {
       padding-left: 40px;
       padding-right: 40px; }
+    .catalog__filter-overlay--no-js .catalog__filter {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      max-height: none;
+      margin-left: 0;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      overflow-y: hidden; }
   .catalog__filter-fildset {
     padding: 40px;
     padding-top: 55px;
     border: none;
     border-bottom: 1px solid #a87b62; }
+    .catalog__filter-overlay--no-js .catalog__filter-fildset {
+      border: 1px solid #a87b62; }
+      .catalog__filter-overlay--no-js .catalog__filter-fildset:nth-of-type(2n) {
+        margin-left: -1px; }
     .catalog__filter-fildset legend {
       top: 30px; }
     .catalog__filter-fildset ul {
@@ -767,6 +784,8 @@ img {
     border: 2px solid #1d1613;
     border-radius: 50%;
     outline: none; }
+    .catalog__filter-overlay--no-js .catalog__filter-close-btn {
+      display: none; }
     .catalog__filter-close-btn::before, .catalog__filter-close-btn::after {
       content: "";
       position: absolute;
@@ -790,6 +809,10 @@ img {
   .catalog__filter-controls {
     margin: 40px;
     margin-top: 15px; }
+    .catalog__filter-overlay--no-js .catalog__filter-controls {
+      grid-column: 1 / -1;
+      margin-left: 0;
+      margin-right: 0; }
   .catalog__list {
     grid-template-columns: repeat(auto-fill, 206px);
     -webkit-box-pack: center;
@@ -806,6 +829,8 @@ img {
     width: auto;
     max-height: calc(100vh - 135px);
     margin: 75px 25px 60px; }
+    .catalog__filter-overlay--no-js .catalog__filter {
+      grid-template-columns: repeat(1, 1fr); }
     .catalog__filter .catalog__price-filter {
       padding-left: 10px;
       padding-right: 10px; }
@@ -814,6 +839,8 @@ img {
     padding-top: 55px;
     border: none;
     border-bottom: 1px solid #a87b62; }
+    .catalog__filter-overlay--no-js .catalog__filter-fildset:nth-of-type(2n) {
+      margin-left: 0; }
     .catalog__filter-fildset legend {
       top: 20px; }
     .catalog__filter-fildset ul {

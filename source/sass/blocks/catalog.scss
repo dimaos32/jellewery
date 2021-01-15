@@ -349,10 +349,13 @@
 @media (max-width: $tablet-width) {
   .catalog__filter-open-btn {
     margin-bottom: 50px;
+
+    &--no-js {
+      display: none;
+    }
   }
 
   .catalog__filter-overlay {
-    position: relative;
     z-index: 1;
 
     &--closed {
@@ -367,6 +370,11 @@
       left: 0;
       right: 0;
       background-color: $page--bg;
+    }
+
+    &--no-js {
+      position: relative;
+      display: block;
     }
   }
 
@@ -383,6 +391,16 @@
       padding-left: 40px;
       padding-right: 40px;
     }
+
+    .catalog__filter-overlay--no-js & {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      max-height: none;
+      margin-left: 0;
+      box-shadow: none;
+      overflow-y: hidden;
+    }
   }
 
   .catalog__filter-fildset {
@@ -390,6 +408,14 @@
     padding-top: 55px;
     border: none;
     border-bottom: 1px solid $catalog--filter-border;
+
+    .catalog__filter-overlay--no-js & {
+      border: 1px solid $catalog--filter-border;
+
+      &:nth-of-type(2n) {
+        margin-left: -1px;
+      }
+    }
 
     legend {
       top: 30px;
@@ -451,6 +477,10 @@
     border-radius: 50%;
     outline: none;
 
+    .catalog__filter-overlay--no-js & {
+      display: none;
+    }
+
     &::before,
     &::after {
       content: "";
@@ -488,6 +518,12 @@
   .catalog__filter-controls {
     margin: 40px;
     margin-top: 15px;
+
+    .catalog__filter-overlay--no-js & {
+      grid-column: 1 / -1;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   .catalog__list {
@@ -511,6 +547,10 @@
     max-height: calc(100vh - 135px);
     margin: 75px 25px 60px;
 
+    .catalog__filter-overlay--no-js & {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     .catalog__price-filter {
       padding-left: 10px;
       padding-right: 10px;
@@ -522,6 +562,10 @@
     padding-top: 55px;
     border: none;
     border-bottom: 1px solid $catalog--filter-border;
+
+    .catalog__filter-overlay--no-js &:nth-of-type(2n) {
+      margin-left: 0;
+    }
 
     legend {
       top: 20px;
